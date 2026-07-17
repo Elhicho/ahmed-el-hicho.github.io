@@ -1,0 +1,18 @@
+PUBLICATION RAPIDE SUR GITHUB PAGES
+
+Nom de dépôt conseillé :
+ahmed-el-hicho.github.io
+
+À déposer à la racine du dépôt :
+- index.html
+- styles.css
+- script.js
+- 404.html
+- robots.txt
+- sitemap.xml
+- .nojekyll
+- dossier assets
+- README.md
+- PORTFOLIO_TECHNIQUE.md
+
+Le site est autonome et ne nécessite ni installation ni compilation.
