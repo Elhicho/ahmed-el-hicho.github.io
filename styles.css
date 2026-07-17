@@ -904,3 +904,466 @@ button, a { -webkit-tap-highlight-color: transparent; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+
+/* ==================== 1. THÈME SOMBRE (DARK MODE) ==================== */
+body.dark-theme {
+  --ink: #f8fafc;
+  --muted: #94a3b8;
+  --burgundy: #0f172a;
+  --burgundy-2: #1e293b;
+  --wine: #334155;
+  --cream: #090d16;
+  --cream-2: #111827;
+  --gold: #d4a373;
+  --gold-soft: #b28a4a;
+  --line: rgba(255, 255, 255, .12);
+  --shadow: 0 24px 70px rgba(0, 0, 0, .45);
+  background:
+    radial-gradient(circle at 15% 8%, rgba(212, 163, 115, .08), transparent 27rem),
+    radial-gradient(circle at 88% 35%, rgba(30, 41, 59, .4), transparent 35rem),
+    var(--cream);
+}
+
+body.dark-theme .site-header {
+  background: rgba(9, 13, 22, .82);
+}
+
+body.dark-theme .project-card,
+body.dark-theme .skill-cluster,
+body.dark-theme .contact-card,
+body.dark-theme .vision-card,
+body.dark-theme .aero-standards-box {
+  background: var(--cream-2);
+  border-color: rgba(212, 163, 115, .18);
+}
+
+body.dark-theme .project-number,
+body.dark-theme .cluster-number {
+  color: var(--gold);
+}
+
+body.dark-theme .report-link,
+body.dark-theme .quick-view-btn {
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .15);
+  color: var(--ink);
+}
+
+body.dark-theme .report-link:hover,
+body.dark-theme .quick-view-btn:hover {
+  background: var(--gold);
+  color: #0f172a;
+}
+
+/* ==================== 2. HEADER ACTIONS & THEME TOGGLE ==================== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(230, 207, 159, .35);
+  border-radius: 50%;
+  background: var(--cream-2);
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+  border-color: var(--gold);
+}
+
+.theme-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ==================== 3. BARRE DE RECHERCHE PROJETS ==================== */
+.project-search-container {
+  max-width: 650px;
+  margin: 0 auto 1.8rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: .7;
+}
+
+.project-search-input {
+  width: 100%;
+  padding: 0.82rem 2.8rem 0.82rem 2.6rem;
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  color: var(--ink);
+  background: var(--cream-2);
+  border: 1.5px solid rgba(230, 207, 159, .35);
+  border-radius: 999px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.03);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.project-search-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 6px 24px rgba(201, 154, 80, .15);
+}
+
+.project-search-input::placeholder {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  line-height: 1;
+  transition: color .2s ease;
+}
+
+.clear-search-btn:hover {
+  color: var(--ink);
+}
+
+/* ==================== 4. BOUTONS ACTIONS PROJET ==================== */
+.project-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+}
+
+.quick-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.52rem 0.95rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--burgundy);
+  background: var(--cream);
+  border: 1px solid rgba(59, 16, 24, .18);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.quick-view-btn:hover {
+  background: var(--burgundy);
+  color: var(--cream-2);
+  border-color: var(--burgundy);
+  transform: translateY(-2px);
+}
+
+/* ==================== 5. GRILLE RÉFÉRENTIELS & STANDARDS AÉRO ==================== */
+.aero-standards-box {
+  margin-top: 3.2rem;
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+  background: var(--cream-2);
+  border: 1px solid rgba(230, 207, 159, .25);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.standards-header {
+  margin-bottom: 2rem;
+}
+
+.standards-header h3 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  color: var(--ink);
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.standard-pillar h4 {
+  margin: 0 0 1rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(201, 154, 80, .25);
+  padding-bottom: 0.45rem;
+}
+
+.standard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.standard-tags span {
+  padding: 0.38rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid rgba(230, 207, 159, .35);
+  border-radius: 8px;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  cursor: default;
+}
+
+.standard-tags span:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  background: rgba(201, 154, 80, .12);
+}
+
+/* ==================== 6. CONTACT ACTIONS ENHANCED ==================== */
+.email-action-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.copy-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--cream-2);
+  border: 1px solid rgba(230, 207, 159, .35);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.copy-icon-btn:hover {
+  transform: scale(1.08);
+  border-color: var(--gold);
+}
+
+.copy-toast {
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--burgundy);
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 10;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.button-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.button-outline-gold:hover {
+  background: var(--gold);
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+/* ==================== 7. FENÊTRE MODALE APERÇU (QUICK VIEW MODAL) ==================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, .65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: 740px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cream-2);
+  color: var(--ink);
+  border: 1px solid rgba(230, 207, 159, .35);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .45);
+  overflow: hidden;
+  transform: translateY(24px) scale(0.96);
+  transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.open .modal-container {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1.8rem 1.2rem;
+  border-bottom: 1px solid rgba(230, 207, 159, .2);
+  background: var(--cream);
+}
+
+.modal-category {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.2rem;
+  line-height: 1;
+  transition: color .2s ease;
+}
+
+.modal-close:hover {
+  color: var(--ink);
+}
+
+.modal-body {
+  padding: 1.6rem 1.8rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.modal-section h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.modal-section p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.modal-tags-container h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.modal-tags span {
+  padding: 0.32rem 0.72rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--cream);
+  border: 1px solid rgba(230, 207, 159, .3);
+  border-radius: 6px;
+  color: var(--ink);
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  padding: 1.2rem 1.8rem;
+  border-top: 1px solid rgba(230, 207, 159, .2);
+  background: var(--cream);
+}
+
+@media (max-width: 640px) {
+  .modal-container {
+    max-height: 94vh;
+  }
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 1.2rem;
+  }
+  .modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

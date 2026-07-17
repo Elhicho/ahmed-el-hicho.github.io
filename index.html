@@ -62,9 +62,14 @@
       <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
 
-    <button class="lang-toggle" type="button" aria-label="Changer la langue">
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Basculer le thème (clair/sombre)" title="Changer de thème">
+        <span id="themeIcon" class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+      <button class="lang-toggle" type="button" aria-label="Changer la langue">
       <span class="lang-active">FR</span><span aria-hidden="true">/</span><span>EN</span>
-    </button>
+      </button>
+    </div>
   </header>
 
   <main id="main">
@@ -180,6 +185,13 @@
         </div>
       </div>
 
+      <div class="project-search-container reveal">
+        <div class="search-input-wrapper">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="text" id="projectSearchInput" class="project-search-input" placeholder="Rechercher par outil, norme ou mot-clé (ex : Abaqus, Tulip, Python, QRQC...)" aria-label="Rechercher un projet">
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Effacer la recherche" style="display: none;">✕</button>
+        </div>
+      </div>
       <div class="project-toolbar reveal" role="group" aria-label="Filtrer les projets">
         <button class="filter-button active" type="button" data-filter="all" data-i18n="filterAll">Tous</button>
         <button class="filter-button" type="button" data-filter="industry" data-i18n="filterIndustry">Industrie 4.0</button>
@@ -204,7 +216,10 @@
             <li><strong>21</strong><span data-i18n="p1R2">sous-opérations</span></li>
             <li><strong>11</strong><span data-i18n="p1R3">tables de données</span></li>
           </ul>
-          <a class="report-link" href="assets/reports/P01_Rapport_MES_Tulip.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p1" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P01_Rapport_MES_Tulip.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p1Details">
@@ -227,7 +242,10 @@
           <div class="project-impact">
             <span data-i18n="p2Impact">Production • Qualité • Logistique • Maintenance</span>
           </div>
-          <a class="report-link" href="assets/reports/P02_Rapport_Andon_Digital.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p2" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P02_Rapport_Andon_Digital.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p2Details">
@@ -251,7 +269,10 @@
             <li><strong>5</strong><span data-i18n="p3R1">formats audio</span></li>
             <li><strong>17</strong><span data-i18n="p3R2">champs métier</span></li>
           </ul>
-          <a class="report-link" href="assets/reports/P03_Rapport_Reporting_Audio_IA.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p3" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P03_Rapport_Reporting_Audio_IA.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p3Details">
@@ -274,7 +295,10 @@
           <div class="project-impact">
             <span data-i18n="p4Impact">Résonance • Fatigue vibratoire • Flottement aéroélastique</span>
           </div>
-          <a class="report-link" href="assets/reports/P04_Rapport_Analyse_Modale_Abaqus.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p4" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P04_Rapport_Analyse_Modale_Abaqus.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p4Details">
@@ -297,7 +321,10 @@
           <div class="project-impact">
             <span data-i18n="p5Impact">Classification de cordons de soudure WAAM</span>
           </div>
-          <a class="report-link" href="assets/reports/P05_Rapport_Optimisation_SVM_Uzawa.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p5" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P05_Rapport_Optimisation_SVM_Uzawa.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p5Details">
@@ -321,7 +348,10 @@
             <li><strong>2 950</strong><span>MJ</span></li>
             <li><strong>209</strong><span>kg CO₂-eq</span></li>
           </ul>
-          <a class="report-link" href="assets/reports/P06_Rapport_Ecoconception_ACV.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p6" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P06_Rapport_Ecoconception_ACV.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p6Details">
@@ -344,7 +374,10 @@
           <div class="project-impact">
             <span data-i18n="p7Impact">Turbines • Moteurs aéronautiques • Zéro vibration résiduelle</span>
           </div>
-          <a class="report-link" href="assets/reports/P07_Rapport_Equilibrage_Dynamique.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p7" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P07_Rapport_Equilibrage_Dynamique.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p7Details">
@@ -367,7 +400,10 @@
             <li><strong>140</strong><span>W nominal</span></li>
             <li><strong>1.1</strong><span>Hz cadence</span></li>
           </ul>
-          <a class="report-link" href="assets/reports/P08_Rapport_Conception_VAE.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p8" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P08_Rapport_Conception_VAE.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p8Details">
@@ -390,7 +426,10 @@
             <li><strong>>95%</strong><span>Rendement</span></li>
             <li><strong>PMSM</strong><span>Aimants permanents</span></li>
           </ul>
-          <a class="report-link" href="assets/reports/P09_Rapport_MSAP_Electrotechnique.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p9" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P09_Rapport_MSAP_Electrotechnique.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p9Details">
@@ -412,7 +451,10 @@
           <div class="project-impact">
             <span data-i18n="p10Impact">Bilan énergétique • Autonomie • Optimisation Wh/km</span>
           </div>
-          <a class="report-link" href="assets/reports/P10_Rapport_Chaine_Traction_VE.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p10" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P10_Rapport_Chaine_Traction_VE.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p10Details">
@@ -434,7 +476,10 @@
           <div class="project-impact">
             <span data-i18n="p11Impact">Qualité 0 Défaut • Procédés Spéciaux • Aérospatial</span>
           </div>
-          <a class="report-link" href="assets/reports/P11_Rapport_Optimisation_Taguchi_ANOVA.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p11" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P11_Rapport_Optimisation_Taguchi_ANOVA.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p11Details">
@@ -457,7 +502,10 @@
             <li><strong>3NF</strong><span>Normalisation</span></li>
             <li><strong>SQL</strong><span>Requêtes complexes</span></li>
           </ul>
-          <a class="report-link" href="assets/reports/P12_Rapport_BDD_OREXA_SQL.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          <div class="project-actions-row">
+            <button type="button" class="quick-view-btn" data-project="p12" data-i18n="quickViewBtn">👁️ Aperçu technique</button>
+            <a class="report-link" href="assets/reports/P12_Rapport_BDD_OREXA_SQL.pdf" target="_blank" rel="noopener">Consulter le rapport technique PDF ↗</a>
+          </div>
           <details>
             <summary data-i18n="caseStudy">Voir l’étude de cas</summary>
             <p data-i18n="p12Details">
@@ -595,14 +643,47 @@
         </article>
       </div>
 
-      <div class="aero-keywords reveal">
-        <p data-i18n="aeroKeywords">Mots-clés aéronautiques</p>
-        <div>
-          <span>AS9100</span><span>EASA Part 21/145</span><span>FAL</span><span>MRO</span>
-          <span>Traçabilité unitaire</span><span>Gestion de configuration</span>
-          <span>Maintenance prédictive</span><span>Jumeau numérique</span>
-          <span>WAAM</span><span>eVTOL</span><span>UAV</span><span>Propulsion électrique</span>
+      <div class="aero-standards-box reveal">
+        <div class="standards-header">
+          <p class="eyebrow" data-i18n="standardsEyebrow">Référentiels & Exigences industrielles</p>
+          <h3 data-i18n="standardsTitle">Standards de l'Aérospatiale & Méthodologies d'Ingénierie</h3>
         </div>
+        <div class="standards-grid">
+          <div class="standard-pillar">
+            <h4 data-i18n="pillar1Title">Normes & Conformité Qualité</h4>
+            <div class="standard-tags">
+              <span title="Système de management de la qualité aéronautique">AS9100</span>
+              <span title="Conception et maintenance aéronautique européenne">EASA Part 21 / Part 145</span>
+              <span title="Quick Response Quality Control">QRQC</span>
+              <span title="Analyse des causes racines">5M / Ishikawa</span>
+              <span title="Détrompage mécanique et process">Poka-Yoke</span>
+              <span title="Cycle en V et plans de tests">Validation & Vérification (V&V)</span>
+            </div>
+          </div>
+          <div class="standard-pillar">
+            <h4 data-i18n="pillar2Title">Industrialisation & Opérations (FAL)</h4>
+            <div class="standard-tags">
+              <span title="Final Assembly Line (Ligne d'assemblage finale)">FAL</span>
+              <span title="Maintenance, Repair and Overhaul">MRO</span>
+              <span title="Product Lifecycle Management">PLM</span>
+              <span title="Suivi individuel par pièce et ordre de fabrication">Traçabilité unitaire</span>
+              <span title="Gestion rigoureuse des évolutions de plans">Gestion de configuration</span>
+              <span title="Architecture d'intégration MES / ERP">ISA-95 / MESA</span>
+            </div>
+          </div>
+          <div class="standard-pillar">
+            <h4 data-i18n="pillar3Title">Technologies & Procédés Avancés</h4>
+            <div class="standard-tags">
+              <span title="Réplique numérique temps réel du comportement physique">Jumeau numérique</span>
+              <span title="Surveillance des dérives et pronostic de durée de vie">Maintenance prédictive</span>
+              <span title="Wire Arc Additive Manufacturing (Fabrication additive métal)">WAAM</span>
+              <span title="Analyse du Cycle de Vie et éco-conception (Granta)">ACV & Éco-conception</span>
+              <span title="Aéronef à décollage et atterrissage verticaux">eVTOL / UAV</span>
+              <span title="Dimensionnement et intégration de chaînes électriques">Propulsion électrique</span>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -630,7 +711,12 @@
           </p>
         </div>
         <div class="contact-actions">
-          <a class="button button-light" href="mailto:elhichoahmed8@gmail.com">elhichoahmed8@gmail.com</a>
+          <div class="email-action-group">
+            <a class="button button-light" href="mailto:elhichoahmed8@gmail.com">elhichoahmed8@gmail.com</a>
+            <button type="button" id="copyEmailBtn" class="copy-icon-btn" aria-label="Copier l'adresse e-mail" title="Copier l'e-mail">📋</button>
+            <span id="copyToast" class="copy-toast" aria-live="polite" data-i18n="copyEmailSuccess">E-mail copié !</span>
+          </div>
+          <button type="button" id="vcardExportBtn" class="button button-outline-gold" data-i18n="vcardBtn">📇 Exporter ma fiche (.vcf)</button>
           <a class="text-link" href="tel:+33759480725">+33 7 59 48 07 25</a>
           <a class="text-link" href="https://www.linkedin.com/in/ahmed-el-hicho" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a class="text-link" href="https://github.com/Elhicho" target="_blank" rel="noopener">GitHub ↗</a>
@@ -647,5 +733,38 @@
   <noscript>
     <div class="noscript">Cette page reste accessible sans JavaScript, mais les filtres et le changement de langue seront désactivés.</div>
   </noscript>
+  <div id="quickViewModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span id="modalCategory" class="modal-category">Industrie 4.0</span>
+          <h3 id="modalTitle" class="modal-title">Titre du projet</h3>
+        </div>
+        <button type="button" id="closeModalBtn" class="modal-close" aria-label="Fermer">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 data-i18n="modalContextTitle">Contexte & Problématique industrielle</h4>
+          <p id="modalContext"></p>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modalMethodTitle">Méthodologie & Déploiement technique</h4>
+          <p id="modalMethod"></p>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modalResultsTitle">Résultats clés & Apports opérationnels</h4>
+          <p id="modalResults"></p>
+        </div>
+        <div class="modal-tags-container">
+          <h4 data-i18n="modalToolsTitle">Environnement & Outils</h4>
+          <div id="modalTags" class="modal-tags"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="modalReportLink" class="button button-primary" href="#" target="_blank" rel="noopener">Consulter le rapport complet (PDF) ↗</a>
+        <button type="button" id="modalCloseActionBtn" class="button button-light" data-i18n="modalCloseBtn">Fermer</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
