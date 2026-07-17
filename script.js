@@ -143,7 +143,9 @@ Object.assign(translations.fr, {
   modalResultsTitle: "Résultats clés & Apports opérationnels",
   modalToolsTitle: "Environnement & Outils",
   modalCloseBtn: "Fermer",
-  searchPlaceholder: "Rechercher par outil, norme ou mot-clé (ex : Abaqus, Tulip, Python, QRQC...)"
+  searchPlaceholder: "Rechercher par outil, norme ou mot-clé (ex : Abaqus, Tulip, Python, QRQC...)",
+  jobDatingTitle: "Chef de Projet / Pilote — Forum Job Dating (2e Édition)",
+  jobDatingText: "Pilotage général de la 2e édition du Job Dating à Arts et Métiers campus de Rabat : coordination d'un forum entreprises de 40+ partenaires industriels, management de 15 responsables de pôles et pilotage budgétaire."
 });
 
 Object.assign(translations.en, {
@@ -160,7 +162,9 @@ Object.assign(translations.en, {
   modalResultsTitle: "Key Results & Operational Value",
   modalToolsTitle: "Environment & Tools",
   modalCloseBtn: "Close",
-  searchPlaceholder: "Search by tool, standard or keyword (e.g. Abaqus, Tulip, Python, QRQC...)"
+  searchPlaceholder: "Search by tool, standard or keyword (e.g. Abaqus, Tulip, Python, QRQC...)",
+  jobDatingTitle: "Project Manager / Pilot — Job Dating Forum (2nd Edition)",
+  jobDatingText: "General pilot and coordinator for the 2nd Job Dating forum at Arts et Métiers Rabat campus: managed 40+ industrial corporate partners, led 15 team leads, and oversaw overall budgeting and operations."
 });
 
 const langToggle = document.querySelector(".lang-toggle");
