@@ -19,12 +19,12 @@ Portfolio personnel responsive et bilingue, conçu pour présenter un profil d'�
 
 ## Publication comme site personnel
 
-1. Créer un dépôt nommé `ahmed-el-hicho.github.io`.
+1. Créer un dépôt nommé `ahmed-el-hicho.github.io` (déjà fait : https://github.com/Elhicho/ahmed-el-hicho.github.io).
 2. Ajouter tous les fichiers de ce dossier à la racine du dépôt.
 3. Valider les fichiers sur la branche principale.
 4. Activer GitHub Pages pour publier la branche principale depuis la racine du dépôt.
 
-Adresse prévue : `https://ahmed-el-hicho.github.io/`
+Adresse du site : `https://elhicho.github.io/ahmed-el-hicho.github.io/`
 
 ## Modification rapide
 
