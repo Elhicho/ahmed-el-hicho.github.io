@@ -6,7 +6,7 @@ const translations = {
     heroLine1: "Je relie la mécanique,", heroLine2: "la donnée et l’IA", heroLine3: "aux réalités industrielles.",
     heroLead: "Orienté aéronautique et spatial, je conçois des solutions concrètes : modèles de calcul, applications métiers, systèmes MES et outils d’aide à la décision.",
     heroProjects: "Découvrir mes projets", heroCV: "Voir mon CV",
-    availability: "Disponible pour un stage de fin d’études à partir de janvier 2027",
+    availability: "Disponible pour un stage de fin d’études de février 2027 à août 2027",
     heroCard1Label: "Spécialisation", heroCard2Label: "Mobilité", heroCard2Value: "France & international",
     metric1: "tables interconnectées dans le MES", metric2: "sous-opérations digitalisées", metric3: "champs métier extraits par IA", metric4: "KPI industriels structurés",
     aboutEyebrow: "Profil", aboutTitle: "Un ingénieur qui comprend le terrain avant de proposer une solution.",
@@ -60,7 +60,7 @@ const translations = {
     visionText: "Je m’intéresse aux copilotes métiers, à l’inspection assistée, à la maintenance prédictive, à l’analyse documentaire et à l’aide à la décision. Ma ligne directrice : une IA explicable, intégrée aux processus qualité et réellement utile aux ingénieurs comme aux opérateurs.",
     contactEyebrow: "Parlons de votre prochain défi",
     contactTitle: "Industrialisation, méthodes, structures ou IA appliquée : échangeons.",
-    contactText: "Je recherche un stage de fin d’études à partir de janvier 2027, en France ou à l’international.",
+    contactText: "Je recherche un stage de fin d’études de février 2027 à août 2027, en France ou à l’international.",
     footer: "Conçu comme un pont entre ingénierie, industrie et numérique."
   },
   en: {
@@ -70,7 +70,7 @@ const translations = {
     heroLine1: "I connect mechanics,", heroLine2: "data and AI", heroLine3: "to industrial realities.",
     heroLead: "Focused on aerospace, I build practical solutions: engineering models, business applications, MES systems and decision-support tools.",
     heroProjects: "Explore my projects", heroCV: "View my résumé",
-    availability: "Available for a final-year internship from January 2027",
+    availability: "Available for a final-year internship from February to August 2027",
     heroCard1Label: "Specialization", heroCard2Label: "Mobility", heroCard2Value: "France & international",
     metric1: "interconnected MES tables", metric2: "digitized sub-operations", metric3: "business fields extracted by AI", metric4: "structured industrial KPIs",
     aboutEyebrow: "About", aboutTitle: "An engineer who understands the shop floor before proposing a solution.",
@@ -124,7 +124,7 @@ const translations = {
     visionText: "I am interested in engineering copilots, assisted inspection, predictive maintenance, document analysis and decision support. My guiding principle is explainable AI, embedded in quality processes and genuinely useful to engineers and operators.",
     contactEyebrow: "Let’s discuss your next challenge",
     contactTitle: "Industrialization, methods, structures or applied AI: let’s talk.",
-    contactText: "I am seeking a final-year internship from January 2027, in France or internationally.",
+    contactText: "I am seeking a final-year internship from February to August 2027, in France or internationally.",
     footer: "Designed as a bridge between engineering, industry and digital technology."
   }
 };
