@@ -915,3 +915,78 @@ window.addEventListener("keydown", (e) => {
     firstElement.focus();
   }
 });
+
+
+  // ==================== SECURITY & ANTI-SCRAPING ====================
+  // Obfuscated Email Decode
+  const secureEmailBtns = document.querySelectorAll('.secure-email');
+  secureEmailBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const encoded = btn.getAttribute('data-contact');
+      if (encoded) {
+        const decoded = atob(encoded);
+        btn.textContent = decoded;
+        btn.href = `mailto:${decoded}`;
+        btn.classList.remove('secure-email');
+      }
+    });
+  });
+
+  // Document Password Protection (Client-Side)
+  // Hardcoded hash check for simplicity (password is "aero2027")
+  // btoa("aero2027") = "YWVybzIwMjc="
+  const TARGET_HASH = "YWVybzIwMjc=";
+  
+  const securityModal = document.getElementById('securityModal');
+  const closeSecurityModal = document.getElementById('closeSecurityModal');
+  const cancelSecurityBtn = document.getElementById('cancelSecurityBtn');
+  const confirmSecurityBtn = document.getElementById('confirmSecurityBtn');
+  const documentPassword = document.getElementById('documentPassword');
+  const securityError = document.getElementById('securityError');
+  let pendingDocUrl = '';
+
+  // Intercept PDF links
+  const docLinks = document.querySelectorAll('a[href$=".pdf"]');
+  docLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      pendingDocUrl = link.href;
+      securityModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      documentPassword.value = '';
+      securityError.style.display = 'none';
+      documentPassword.focus();
+    });
+  });
+
+  function closeSecurity() {
+    securityModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    pendingDocUrl = '';
+  }
+
+  function verifyPassword() {
+    const inputHash = btoa(documentPassword.value);
+    if (inputHash === TARGET_HASH) {
+      // Success
+      closeSecurity();
+      window.open(pendingDocUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      // Error
+      securityError.style.display = 'block';
+      documentPassword.value = '';
+    }
+  }
+
+  if (closeSecurityModal) closeSecurityModal.addEventListener('click', closeSecurity);
+  if (cancelSecurityBtn) cancelSecurityBtn.addEventListener('click', closeSecurity);
+  if (confirmSecurityBtn) confirmSecurityBtn.addEventListener('click', verifyPassword);
+  
+  if (documentPassword) {
+    documentPassword.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        verifyPassword();
+      }
+    });
+  }

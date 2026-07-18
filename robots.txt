@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /assets/pdf/
+Disallow: /assets/media/
 Allow: /
-Sitemap: https://elhicho.github.io/ahmed-el-hicho.github.io/sitemap.xml
