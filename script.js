@@ -637,7 +637,7 @@ const projectQuickViewData = {
     resultsEn: "The reference case gives 24.9 km/h and 86.6 N·m at the disc. These figures remain those of an academic model and depend on the selected load assumptions.",
     tags: ["HyperMesh", "OptiStruct", "Bilan énergétique", "Optimisation topologique"],
     tagsEn: ["HyperMesh", "OptiStruct", "Energy balance", "Topological optimization"],
-    reportPdf: "assets/reports/P08_Rapport_Conception_VAE.pdf"
+    reportPdf: "assets/reports/P08_Rapport_Conception_VAE.pdf?v=2"
   },
   p9: {
     categoryFr: "Électrotechnique & Simulation",
