@@ -1,258 +1,393 @@
 const translations = {
   fr: {
-    brandRole: "Aeronautics & Space",
+    brandRole: "Élève ingénieur · Aeronautics & Space",
     navAbout: "Profil", navProjects: "Projets", navJourney: "Parcours", navSkills: "Compétences", navContact: "Contact",
     heroEyebrow: "Élève ingénieur Arts et Métiers",
-    heroLine1: "Je relie la mécanique,", heroLine2: "la donnée et l’IA", heroLine3: "aux réalités industrielles.",
-    heroLead: "Orienté aéronautique et spatial, je conçois des solutions concrètes : modèles de calcul, applications métiers, systèmes MES et outils d’aide à la décision.",
+    heroLine1: "Je transforme", heroLine2: "des besoins industriels", heroLine3: "en outils testables.",
+    heroLead: "Mes projets récents vont d’un prototype MES sous Tulip à une analyse modale sous Abaqus, en passant par une application ANDON sous Flask. Je documente aussi les limites et les résultats de chaque travail.",
     heroProjects: "Découvrir mes projets", heroCV: "Voir mon CV",
     availability: "Disponible pour un stage de fin d’études de février 2027 à août 2027",
-    heroCard1Label: "Spécialisation", heroCard2Label: "Mobilité", heroCard2Value: "France & international",
-    metric1: "tables interconnectées dans le MES", metric2: "sous-opérations digitalisées", metric3: "champs métier extraits par IA", metric4: "KPI industriels structurés",
-    aboutEyebrow: "Profil", aboutTitle: "Un ingénieur qui comprend le terrain avant de proposer une solution.",
-    aboutP1: "Mon parcours associe mécanique, simulation numérique, méthodes industrielles et développement logiciel. J’aime partir d’un problème réel, clarifier les contraintes, construire un prototype, mesurer les résultats puis documenter une solution utilisable par les équipes.",
-    aboutP2: "Je travaille avec méthode, confiance et sens des responsabilités. Mon objectif est de contribuer à l’industrialisation de systèmes aéronautiques plus sûrs, plus performants et mieux pilotés par la donnée.",
-    quote: "Comprendre vite, proposer avec discernement et transformer une idée technique en résultat mesurable.",
-    projectsEyebrow: "Projets phares", projectsTitle: "Des réalisations à l’interface entre atelier, mécanique, données et intelligence artificielle.",
+    heroCard1Label: "Parcours", heroCard2Label: "Mobilité", heroCard2Value: "France & international",
+    metric1: "tables interconnectées dans le MES", metric2: "sous-opérations digitalisées", metric3: "champs métier extraits par IA", metric4: "partenaires coordonnés pour le Job Dating",
+    aboutEyebrow: "Profil", aboutTitle: "J’apprends surtout en construisant, en testant et en corrigeant.",
+    aboutP1: "Sur le projet MES, notre équipe de trois a construit une architecture de onze tables et une interface pour dix opérations d’assemblage. Les essais ont révélé deux ruptures de traçabilité que nous avons corrigées.",
+    aboutP2: "Cette expérience m’a appris à distinguer un prototype prometteur d’un système réellement validé : je présente donc ici les résultats obtenus, mais aussi les hypothèses et les limites qui restent à traiter.",
+    quote: "Un prototype crédible n’est pas celui qui promet le plus, mais celui dont on peut expliquer les choix, les tests et les limites.",
+    projectsEyebrow: "Projets phares", projectsTitle: "Trois projets résument ma façon de travailler ; neuf autres complètent le parcours.",
     filterAll: "Tous", filterIndustry: "Industrie 4.0", filterAI: "IA & données", filterMechanics: "Mécanique", filterEco: "Éco-conception",
     caseStudy: "Voir l’étude de cas",
-    p1Title: "MES sur Tulip — Evolutive Lean Factory",
-    p1Text: "Conception d’un MES de niveau 3 pour digitaliser l’assemblage de vérins : traçabilité par ordre de fabrication, horodatage à chaque opération, module qualité et supervision en temps réel.",
+    p1Title: "Prototype MES sous Tulip — X-Manufacturing",
+    p1Text: "Notre équipe a construit une architecture de onze tables, une interface opérateur pour dix opérations d’assemblage et un tableau de bord superviseur. Le prototype a été testé sur la plateforme pédagogique ELF.",
     p1R1: "opérations", p1R2: "sous-opérations", p1R3: "tables de données",
-    p1Details: "Architecture pensée pour identifier les goulots d’étranglement opération par opération. Le projet couvre six fonctions MESA et transpose les principes de traçabilité unitaire attendus sur une FAL.",
-    p2Title: "Système ANDON digital",
-    p2Text: "Application web temps réel avec API REST, cycle OPEN–ACK–ARRIVED–CLOSED, priorisation des alertes, suivi MTTA/MTTR, contrôle des SLA et capitalisation 5M.",
-    p2Impact: "Production • Qualité • Logistique • Maintenance",
-    p2Details: "La clôture d’une alerte exige une cause racine et une action corrective. Le système alimente une logique QRQC et améliore la réactivité collective sur la ligne Karakuri A1.",
-    p3Title: "Reporting terrain par audio et IA",
-    p3Text: "Pipeline transformant un compte rendu vocal en données techniques structurées et en rapport métier directement exploitable par les équipes industrielles.",
+    p1Details: "Les essais ont révélé deux ruptures de traçabilité liées aux triggers ; elles ont été corrigées. Le rapport signale encore des dysfonctionnements résiduels et l’absence de tests automatisés sur Tulip.",
+    p2Title: "Prototype de système ANDON digital",
+    p2Text: "Application Flask/SQLite avec cycle OPEN–ACK–ARRIVED–CLOSED, priorisation des alertes et clôture conditionnée à la saisie d’une cause 5M et d’une action corrective.",
+    p2Impact: "5 catégories d’alerte • 4 états • scénarios simulés",
+    p2Details: "Les gains observés proviennent de scénarios simulés, pas d’un déploiement industriel long terme. La suite proposée dans le rapport est d’ajouter boutons, voyants et écran dédiés, puis de consolider les KPI.",
+    p3Title: "Prototype de reporting terrain par audio",
+    p3Text: "Pendant mon stage, j’ai prototypé une chaîne qui transcrit un compte rendu vocal puis remplit dix-sept champs dans un modèle de visite. Le rapport documente cinq formats audio pris en charge.",
     p3R1: "formats audio", p3R2: "champs métier",
-    p3Details: "La solution combine transcription, extraction NLP et génération de livrable pour réduire les tâches administratives et mieux capitaliser les observations réalisées sur le terrain.",
-    p4Title: "Analyse modale de structures",
-    p4Text: "Modélisation par éléments finis, convergence de maillage, extraction des fréquences propres et interprétation des modes de flexion, torsion et couplage.",
-    p4Impact: "Résonance • Fatigue vibratoire • Flottement aéroélastique",
-    p4Details: "La démarche vise à prévenir la coïncidence entre fréquences propres et excitations aérodynamiques ou moteurs, enjeu critique pour les structures aéronautiques.",
-    p5Title: "Optimisation d’un SVM par Uzawa",
+    p3Details: "Le prototype nécessite une connexion aux services OpenAI et une validation humaine des termes métier. Aucune mesure d’exactitude ni étude utilisateurs n’est publiée à ce stade.",
+    p4Title: "Analyse modale sous Abaqus, confrontée aux mesures",
+    p4Text: "Modélisation d’une demi-lame encastrée, étude de convergence et comparaison de quatre fréquences propres avec les mesures obtenues au stroboscope sur le même montage.",
+    p4Impact: "4 modes comparés • écarts relatifs de 1,1 à 7,2 %",
+    p4Details: "L’écart le plus élevé concerne le quatrième mode. Le rapport l’explique notamment par les incertitudes sur le module d’Young, l’épaisseur réelle et la qualité de l’encastrement.",
+    p5Title: "Implémentation d’un SVM par l’algorithme d’Uzawa",
     p5Text: "Implémentation from scratch d’un algorithme primal-dual sous contraintes, avec vérification de la convergence et visualisation automatique des vecteurs supports.",
-    p5Impact: "Classification de cordons de soudure WAAM",
-    p5Details: "Application à la fabrication additive arc-fil, procédé pertinent pour produire des structures aéronautiques de grande dimension en aluminium ou en titane.",
-    p6Title: "Éco-conception et analyse de cycle de vie",
-    p6Text: "Analyse complète d’une trottinette électrique, sélection des matériaux, quantification des impacts et recommandations de Design for Disassembly.",
-    p6Details: "L’étude identifie la fabrication et les matières premières comme principaux postes d’impact et quantifie le potentiel de récupération associé au recyclage.",
-    journeyEyebrow: "Parcours", journeyTitle: "Expérience industrielle, formation scientifique et responsabilités collectives.",
+    p5Impact: "Séparation parfaite sur le jeu de données du TP",
+    p5Details: "Le résultat valide l’implémentation sur les données fournies, mais ne mesure pas encore la capacité de généralisation sur d’autres cordons ou d’autres conditions de fabrication.",
+    p6Title: "Éco-audit et scénarios d’amélioration d’une trottinette",
+    p6Text: "Démontage, évaluation de la réparabilité et de la recyclabilité, puis comparaison de scénarios portant sur la batterie, l’aluminium recyclé et la durée de vie du produit.",
+    p6Details: "L’éco-audit estime 376 kg CO₂-eq par produit. Le scénario combiné atteint une réduction calculée de 58 %, sous les hypothèses décrites dans le rapport ; il ne s’agit pas d’une ACV certifiée.",
+    journeyEyebrow: "Parcours", journeyTitle: "Des expériences techniques, mais aussi des responsabilités très concrètes.",
     experience: "Expérience", education: "Formation",
     dogaTitle: "Stage ingénieur — DOGA FZ, Tanger Free Zone",
-    dogaText: "Digitalisation de la performance industrielle : application Flask/SQLAlchemy pour cinq départements, exports Excel, plus de 15 KPI et recommandations Odoo/Power BI.",
-    amText: "Cycle ingénieur, expertise Aeronautics & Space. Campus de Rabat puis campus de Bordeaux-Talence.",
+    dogaText: "Développement d’une application Flask/SQLAlchemy pour cinq départements et d’un prototype de reporting audio. Odoo et Power BI ont été étudiés comme pistes d’intégration, sans déploiement.",
+    amText: "Cycle ingénieur, parcours Aeronautics & Space. Campus de Rabat puis campus de Bordeaux-Talence.",
     cpgeTitle: "Classes préparatoires — filière MP",
     cpgeText: "CPGE Tétouan : mathématiques, physique, sciences de l’ingénieur et résolution de problèmes complexes.",
     hostTitle: "Hôte Airbnb & Booking.com",
-    hostText: "Gestion des réservations, relation voyageurs, coordination opérationnelle et amélioration continue de l’expérience client.",
+    hostText: "Gestion du planning et des réservations, relation voyageurs et résolution rapide des aléas pour maintenir la continuité des séjours.",
     leadership: "Leadership",
     presidentTitle: "Président de l’Association des Élèves",
-    presidentText: "Représentation étudiante, gestion budgétaire, animation d’une équipe de bénévoles, événements de plus de 200 personnes et partenariats.",
+    presidentText: "Représentation étudiante, gestion budgétaire et coordination d’équipes bénévoles sur les projets du campus.",
     since2025: "Depuis 2025",
     hultText: "Supervision d’un concours international d’entrepreneuriat social et accompagnement des équipes participantes à Arts et Métiers Rabat / UM6P Rabat.",
-    skillsEyebrow: "Compétences", skillsTitle: "Une double culture mécanique et numérique, pensée pour l’industrie aéronautique.",
-    cluster1: "Conception & calcul", cluster2: "Digital manufacturing", cluster3: "Développement & données", cluster4: "Qualité & méthodes",
+    skillsEyebrow: "Compétences", skillsTitle: "Je distingue les outils utilisés, les méthodes appliquées et les notions encore en apprentissage.",
+    cluster1: "Outils de mécanique utilisés", cluster2: "Outils numériques utilisés", cluster3: "Méthodes mises en pratique", cluster4: "Langues",
     aeroKeywords: "Mots-clés aéronautiques",
-    visionEyebrow: "Recherche & veille", visionTitle: "L’employabilité responsable de l’IA dans l’aéronautique et le spatial.",
-    visionText: "Je m’intéresse aux copilotes métiers, à l’inspection assistée, à la maintenance prédictive, à l’analyse documentaire et à l’aide à la décision. Ma ligne directrice : une IA explicable, intégrée aux processus qualité et réellement utile aux ingénieurs comme aux opérateurs.",
-    contactEyebrow: "Parlons de votre prochain défi",
-    contactTitle: "Industrialisation, méthodes, structures ou IA appliquée : échangeons.",
+    visionEyebrow: "Recherche & veille", visionTitle: "Des usages responsables et vérifiables de l’IA dans l’industrie.",
+    visionText: "Je m’intéresse surtout à la synthèse de comptes rendus terrain, à l’inspection assistée et à la recherche documentaire. Mon critère est simple : le résultat doit rester vérifiable par l’ingénieur et s’intégrer au processus qualité.",
+    contactEyebrow: "Disponibilité",
+    contactTitle: "Vous recherchez un stagiaire en industrialisation, méthodes ou calcul ? Échangeons.",
     contactText: "Je recherche un stage de fin d’études de février 2027 à août 2027, en France ou à l’international.",
-    footer: "Conçu comme un pont entre ingénierie, industrie et numérique."
+    footer: "Portfolio conçu et documenté par Ahmed El Hicho."
   },
   en: {
-    brandRole: "Aeronautics & Space",
+    brandRole: "Engineering student · Aeronautics & Space",
     navAbout: "About", navProjects: "Projects", navJourney: "Journey", navSkills: "Skills", navContact: "Contact",
     heroEyebrow: "Arts et Métiers engineering student",
-    heroLine1: "I connect mechanics,", heroLine2: "data and AI", heroLine3: "to industrial realities.",
-    heroLead: "Focused on aerospace, I build practical solutions: engineering models, business applications, MES systems and decision-support tools.",
+    heroLine1: "I turn", heroLine2: "industrial needs", heroLine3: "into testable tools.",
+    heroLead: "My recent projects range from a Tulip MES prototype to modal analysis in Abaqus, with a Flask ANDON application in between. I also document the limitations and results of each piece of work.",
     heroProjects: "Explore my projects", heroCV: "View my résumé",
     availability: "Available for a final-year internship from February to August 2027",
-    heroCard1Label: "Specialization", heroCard2Label: "Mobility", heroCard2Value: "France & international",
-    metric1: "interconnected MES tables", metric2: "digitized sub-operations", metric3: "business fields extracted by AI", metric4: "structured industrial KPIs",
-    aboutEyebrow: "About", aboutTitle: "An engineer who understands the shop floor before proposing a solution.",
-    aboutP1: "My background combines mechanics, numerical simulation, industrial methods and software development. I like to start from a real problem, clarify constraints, build a prototype, measure results and document a solution that teams can actually use.",
-    aboutP2: "I work methodically, confidently and responsibly. My goal is to support the industrialization of safer, higher-performing aerospace systems that are better driven by data.",
-    quote: "Understand quickly, propose thoughtfully and turn a technical idea into a measurable result.",
-    projectsEyebrow: "Selected projects", projectsTitle: "Work at the intersection of the shop floor, mechanics, data and artificial intelligence.",
+    heroCard1Label: "Program", heroCard2Label: "Mobility", heroCard2Value: "France & international",
+    metric1: "interconnected MES tables", metric2: "digitized sub-operations", metric3: "business fields extracted by AI", metric4: "partners coordinated for the Job Dating forum",
+    aboutEyebrow: "About", aboutTitle: "I learn most by building, testing and correcting.",
+    aboutP1: "For the MES project, our three-person team built an eleven-table architecture and an interface covering ten assembly operations. Testing revealed two traceability breaks, which we corrected.",
+    aboutP2: "That experience taught me to distinguish a promising prototype from a genuinely validated system. I therefore present the results obtained here, together with the assumptions and limitations that still need attention.",
+    quote: "A credible prototype is not the one that promises the most, but the one whose choices, tests and limitations can be explained.",
+    projectsEyebrow: "Selected projects", projectsTitle: "Three projects summarize how I work; nine more complete the picture.",
     filterAll: "All", filterIndustry: "Industry 4.0", filterAI: "AI & data", filterMechanics: "Mechanics", filterEco: "Eco-design",
     caseStudy: "View case study",
-    p1Title: "Tulip MES — Evolutive Lean Factory",
-    p1Text: "Designed a level-3 MES to digitize pneumatic cylinder assembly, including work-order traceability, operation-level timestamps, quality reporting and real-time supervision.",
+    p1Title: "Tulip MES prototype — X-Manufacturing",
+    p1Text: "Our team built an eleven-table architecture, an operator interface for ten assembly operations and a supervisor dashboard. The prototype was tested on the ELF learning platform.",
     p1R1: "operations", p1R2: "sub-operations", p1R3: "data tables",
-    p1Details: "The architecture identifies bottlenecks at operation level. It covers six MESA functions and transfers unit-traceability principles to the context of an aerospace final assembly line.",
-    p2Title: "Digital ANDON system",
-    p2Text: "Real-time web application with REST API, OPEN–ACK–ARRIVED–CLOSED workflow, automated alert prioritization, MTTA/MTTR tracking, SLA control and 5M knowledge capture.",
-    p2Impact: "Production • Quality • Logistics • Maintenance",
-    p2Details: "An alert cannot be closed without a root cause and corrective action. The system supports QRQC routines and improves collective responsiveness on the Karakuri A1 line.",
-    p3Title: "Voice-to-report AI pipeline",
-    p3Text: "Pipeline converting an engineer’s voice note into structured technical data and a ready-to-use business report for industrial teams.",
+    p1Details: "Testing revealed two trigger-related traceability breaks, which were corrected. The report still notes residual issues and the lack of automated tests in Tulip.",
+    p2Title: "Digital ANDON system prototype",
+    p2Text: "Flask/SQLite application with an OPEN–ACK–ARRIVED–CLOSED workflow, alert prioritization, and closure conditional on entering a 5M cause and corrective action.",
+    p2Impact: "5 alert categories • 4 states • simulated scenarios",
+    p2Details: "The observed gains come from simulated scenarios, not a long-term industrial deployment. The report proposes adding dedicated buttons, lights and a screen, then consolidating the KPIs.",
+    p3Title: "Voice-based field reporting prototype",
+    p3Text: "During my internship, I prototyped a pipeline that transcribes a spoken report and fills seventeen fields in a visit template. The report documents support for five audio formats.",
     p3R1: "audio formats", p3R2: "business fields",
-    p3Details: "The solution combines transcription, NLP extraction and document generation to reduce administrative work and improve the capture of field knowledge.",
-    p4Title: "Structural modal analysis",
-    p4Text: "Finite-element modeling, mesh convergence study, natural-frequency extraction and interpretation of bending, torsional and coupled modes.",
-    p4Impact: "Resonance • Vibration fatigue • Aeroelastic flutter",
-    p4Details: "The approach aims to prevent natural frequencies from coinciding with aerodynamic or engine excitation frequencies, a critical issue in aerospace structures.",
-    p5Title: "SVM optimization using Uzawa",
-    p5Text: "From-scratch implementation of a constrained primal-dual algorithm, including convergence verification and automatic support-vector visualization.",
-    p5Impact: "WAAM weld-bead classification",
-    p5Details: "Applied to wire-arc additive manufacturing, a relevant process for producing large aerospace structures in aluminum or titanium.",
-    p6Title: "Eco-design and life-cycle assessment",
-    p6Text: "Full life-cycle assessment of an electric scooter, including material selection, impact quantification and Design for Disassembly recommendations.",
-    p6Details: "The study identifies manufacturing and raw materials as the main impact sources and quantifies the potential recovery enabled by recycling.",
-    journeyEyebrow: "Journey", journeyTitle: "Industrial experience, scientific education and collective responsibility.",
+    p3Details: "The prototype requires access to OpenAI services and human validation of technical terms. No accuracy measurement or user study has been published at this stage.",
+    p4Title: "Abaqus modal analysis compared with measurements",
+    p4Text: "Modeling of a clamped half-blade, a convergence study and comparison of four natural frequencies with stroboscope measurements on the same setup.",
+    p4Impact: "4 modes compared • relative differences from 1.1% to 7.2%",
+    p4Details: "The largest difference occurs for the fourth mode. The report links it in particular to uncertainty in Young’s modulus, actual thickness and clamp quality.",
+    p5Title: "SVM implementation using the Uzawa algorithm",
+    p5Text: "From-scratch implementation of a constrained primal-dual algorithm, with convergence checks and automatic support-vector visualization.",
+    p5Impact: "Perfect separation on the course dataset",
+    p5Details: "The result validates the implementation on the supplied data, but does not yet measure its ability to generalize to other beads or manufacturing conditions.",
+    p6Title: "Electric-scooter eco-audit and improvement scenarios",
+    p6Text: "Disassembly, repairability and recyclability assessment, followed by comparison of scenarios involving the battery, recycled aluminum and product life.",
+    p6Details: "The eco-audit estimates 376 kg CO₂-eq per product. The combined scenario reaches a calculated 58% reduction under the report’s assumptions; this is not a certified LCA.",
+    journeyEyebrow: "Journey", journeyTitle: "Technical experience alongside very practical responsibilities.",
     experience: "Experience", education: "Education",
     dogaTitle: "Engineering internship — DOGA FZ, Tanger Free Zone",
-    dogaText: "Industrial performance digitalization: Flask/SQLAlchemy application for five departments, Excel exports, 15+ KPIs and Odoo/Power BI integration recommendations.",
-    amText: "Engineering degree, Aeronautics & Space specialization. Rabat campus followed by Bordeaux-Talence campus.",
+    dogaText: "Developed a Flask/SQLAlchemy application for five departments and a voice-reporting prototype. Odoo and Power BI were studied as possible integrations but were not deployed.",
+    amText: "Engineering program, Aeronautics & Space track. Rabat campus followed by Bordeaux-Talence campus.",
     cpgeTitle: "Preparatory classes — Mathematics & Physics",
     cpgeText: "CPGE Tétouan: mathematics, physics, engineering science and complex problem solving.",
     hostTitle: "Airbnb & Booking.com host",
-    hostText: "Booking management, guest relations, operational coordination and continuous improvement of the customer experience.",
+    hostText: "Managed schedules and bookings, handled guest relations and resolved issues quickly to keep stays running smoothly.",
     leadership: "Leadership",
     presidentTitle: "President of the Student Association",
-    presidentText: "Student representation, budget management, volunteer-team leadership, 200+ attendee events and partnership development.",
+    presidentText: "Student representation, budget management and coordination of volunteer teams on campus projects.",
     since2025: "Since 2025",
     hultText: "Leading an international social-entrepreneurship competition and coaching participating teams at Arts et Métiers Rabat / UM6P Rabat.",
-    skillsEyebrow: "Skills", skillsTitle: "A dual mechanical and digital culture designed for the aerospace industry.",
-    cluster1: "Design & simulation", cluster2: "Digital manufacturing", cluster3: "Software & data", cluster4: "Quality & methods",
+    skillsEyebrow: "Skills", skillsTitle: "I separate tools I have used, methods I have applied and concepts I am still learning.",
+    cluster1: "Mechanical tools used", cluster2: "Digital tools used", cluster3: "Methods applied", cluster4: "Languages",
     aeroKeywords: "Aerospace keywords",
-    visionEyebrow: "Research & technology watch", visionTitle: "Responsible and employable AI for aeronautics and space.",
-    visionText: "I am interested in engineering copilots, assisted inspection, predictive maintenance, document analysis and decision support. My guiding principle is explainable AI, embedded in quality processes and genuinely useful to engineers and operators.",
-    contactEyebrow: "Let’s discuss your next challenge",
-    contactTitle: "Industrialization, methods, structures or applied AI: let’s talk.",
+    visionEyebrow: "Research & technology watch", visionTitle: "Responsible, verifiable uses of AI in industry.",
+    visionText: "I am particularly interested in summarizing field reports, assisted inspection and document search. My criterion is simple: engineers must be able to verify the output, and it must fit into the quality process.",
+    contactEyebrow: "Availability",
+    contactTitle: "Looking for an intern in industrialization, methods or simulation? Let’s talk.",
     contactText: "I am seeking a final-year internship from February to August 2027, in France or internationally.",
-    footer: "Designed as a bridge between engineering, industry and digital technology."
+    footer: "Portfolio designed and documented by Ahmed El Hicho."
   }
 };
 
 Object.assign(translations.fr, {
   quickViewBtn: "👁️ Aperçu technique",
-  standardsEyebrow: "Référentiels & Exigences industrielles",
-  standardsTitle: "Standards de l'Aérospatiale & Méthodologies d'Ingénierie",
-  pillar1Title: "Normes & Conformité Qualité",
-  pillar2Title: "Industrialisation & Opérations (FAL)",
-  pillar3Title: "Technologies & Procédés Avancés",
+  skipLink: "Aller au contenu",
+  homeAria: "Accueil Ahmed El Hicho",
+  menuText: "Menu",
+  mainNavAria: "Navigation principale",
+  metricsAria: "Quelques chiffres",
+  filterProjectsAria: "Filtrer les projets",
+  reportLink: "Consulter le rapport PDF ↗",
+  modalReportLink: "Consulter le rapport complet (PDF) ↗",
+  moreProjectsButton: "Voir les 9 autres projets",
+  lessProjectsButton: "Masquer les 9 autres projets",
+  moreProjectsSummary: "Voir les 9 autres projets académiques",
+  standardsEyebrow: "Notions & veille",
+  standardsTitle: "Référentiels étudiés — il ne s’agit pas de certifications.",
+  pillar1Title: "Qualité aéronautique",
+  pillar2Title: "Industrialisation aéronautique",
+  pillar3Title: "Sujets de veille",
+  langArabic: "Arabe · langue maternelle",
+  langFrench: "Français · courant",
+  langEnglish: "Anglais · B2",
   copyEmailSuccess: "E-mail copié dans le presse-papiers !",
   vcardBtn: "📇 Exporter ma fiche (.vcf)",
-  modalContextTitle: "Contexte & Problématique industrielle",
-  modalMethodTitle: "Méthodologie & Déploiement technique",
-  modalResultsTitle: "Résultats clés & Apports opérationnels",
-  modalToolsTitle: "Environnement & Outils",
+  modalContextTitle: "Contexte et objectif",
+  modalMethodTitle: "Méthode et réalisation",
+  modalResultsTitle: "Résultats et limites",
+  modalToolsTitle: "Outils utilisés",
   modalCloseBtn: "Fermer",
-  searchPlaceholder: "Rechercher par outil, norme ou mot-clé (ex : Abaqus, Tulip, Python, QRQC...)",
-    navMedia: "Médias & Conférences",
-  mediaEyebrow: "Médias & Actualités LinkedIn",
-  mediaTitle: "Conférences, Pilotage d'Événements Industriels et Engagements Institutionnels.",
-  mediaTagEvent: "Événement / Institutionnel",
-  mediaTagPilot: "Chef de Projet / Pilote d'Événement",
-  mediaTagPanel: "Speaker / Table Ronde Industrielle",
-  mediaTagVision: "Leadership & Vision Ingénierie",
+  searchPlaceholder: "Rechercher par outil, méthode ou mot-clé (ex. : Abaqus, Tulip, Python)",
+  searchAria: "Rechercher dans les projets",
+  clearSearchAria: "Effacer la recherche",
+  themeAria: "Changer de thème",
+  themeTitle: "Changer de thème",
+  langAria: "Afficher le site en anglais",
+  menuAria: "Ouvrir ou fermer le menu de navigation",
+  copyEmailAria: "Copier l’adresse e-mail",
+  copyEmailTitle: "Copier l’adresse e-mail",
+  modalCloseAria: "Fermer l’aperçu du projet",
+  p1Context: "Projet académique · équipe de 3 · environnement semi-industriel",
+  p2Context: "Projet académique · prototype et scénarios simulés",
+  p3Context: "Stage DOGA FZ · prototype fonctionnel non évalué quantitativement",
+  p4Context: "TP académique · modèle comparé à l’essai",
+  p5Context: "Mini-projet académique · jeu de données WAAM",
+  p6Context: "Projet académique · éco-audit Granta",
+  p6R1: "réparabilité",
+  p6R2: "recyclabilité",
+  p7Context: "TP académique · équilibrage sur banc",
+  p8Context: "Projet académique · étude énergétique et optimisation",
+  p9Context: "TP académique · simulation FEMM",
+  p10Context: "Projet académique · modèle causal simplifié",
+  p11Context: "Projet académique · plan Taguchi L8",
+  p12Context: "Projet académique · base Access pour la CAN 2025",
+  p7Title: "Équilibrage d’un rotor sur un puis deux plans",
+  p7Text: "Diagnostic vibratoire, équilibrage statique sur 1 plan et dynamique sur 2 plans par la méthode des coefficients d’influence et relevés piézoélectriques sur banc d’essai.",
+  p7Impact: "Après correction : 4 mV sur P1 • 0,07 mV sur P2",
+  p7Details: "Le travail montre aussi les influences croisées entre les deux plans : corriger P1 modifie la réponse de P2. La méthode graphique reste volontairement simple afin de comprendre la physique avant l’automatisation.",
+  p8Title: "Étude énergétique et optimisation d’un disque de frein de VAE",
+  p8Text: "Bilan de puissance du véhicule, calcul du freinage dimensionnant puis optimisation topologique du disque sous contraintes de déplacement, de contrainte et de dimension minimale.",
+  p8R1: "km/h de référence",
+  p8R2: "N·m au disque",
+  p8Details: "Le projet relie les hypothèses énergétiques à une chaîne CAO–HyperMesh–OptiStruct. Les résultats restent ceux d’un modèle académique et dépendent du cas de charge retenu.",
+  p9Title: "Champ statorique et couple d’une MSAP sous FEMM",
+  p9Text: "Simulation des champs créés par les phases, transformation de Concordia et calcul du couple en fonction de l’orientation du champ statorique.",
+  p9R1: "N·m/A mesuré",
+  p9R2: "simulation 2D",
+  p9Details: "Le rapport obtient une constante de couple voisine de 0,15 N·m/A dans le modèle étudié. Cette valeur caractérise la simulation réalisée ; elle ne constitue pas un rendement machine.",
+  p10Title: "Modèle causal d’une chaîne de traction électrique",
+  p10Text: "Modélisation d’une batterie idéale, d’un hacheur, d’un moteur à courant continu, d’un réducteur, d’une roue et de la dynamique longitudinale du véhicule.",
+  p10Impact: "Couple moteur • vitesse véhicule • force aérodynamique",
+  p10Details: "Le modèle rend les relations causales explicites, mais repose sur des hypothèses fortes : tension de batterie constante, convertisseur et réducteur sans pertes, et résistance véhicule linéarisée.",
+  p11Title: "Optimisation Taguchi L8 des conditions de coupe",
+  p11Text: "Huit essais de tournage sur aluminium 2017 pour étudier la vitesse de coupe, l’avance et la profondeur de passe, avec ratio Signal/Bruit et analyse ANOVA.",
+  p11Impact: "Avance : 78,05 % de contribution • optimum A1B1C1",
+  p11Details: "Sur ce jeu d’essais, l’avance est le facteur dominant. Les conditions retenues sont 250 m/min, 0,15 mm/tr et 0,5 mm ; elles restent liées au matériau, à la machine et au protocole du TP.",
+  p12Title: "Base de données relationnelle pour la CAN 2025",
+  p12Text: "Modélisation MCD/MLD selon MERISE puis implémentation sous Microsoft Access pour gérer équipes, joueurs, stades, matchs et participations, avec requêtes, formulaires et états imprimables.",
+  p12R1: "MCD et MLD",
+  p12R2: "requêtes et formulaires",
+  p12Details: "Le rapport démontre l’intégrité référentielle et la génération d’états. L’export vers Excel ou Power BI est présenté comme une évolution possible, pas comme une fonctionnalité déjà déployée.",
+  navMedia: "Sur le terrain",
+  mediaEyebrow: "Sur le terrain",
+  mediaTitle: "Trois traces publiques de mon rôle dans les projets collectifs.",
+  mediaTagEvent: "Rencontre école–entreprises",
+  mediaTagPilot: "Coordination d’événement",
+  mediaTagPanel: "Participation à une table ronde",
   mediaBtnText: "Voir la publication sur LinkedIn ↗",
-  mediaTagHult: "Campus Director — Hult Prize",
-  mediaHultTitle: "Hult Prize à Arts et Métiers Rabat : Un événement marquant pour l'innovation et l'entrepreneuriat",
-  mediaHultText: "Photo collective de la grande finale et des participants à l'auditorium de l'École Arts et Métiers Campus de Rabat. Organisation et accompagnement des élèves ingénieurs sur des problématiques à fort impact technologique et social.",
-  mediaJobTeamTitle: "Présentation de l'Équipe d'Organisation & Dossier de Partenariat Job Dating",
-  mediaJobTeamText: "Affiche officielle de l'équipe organisatrice du Job Dating 2e Édition (en tant que Pilote général de l'événement). Déploiement du dossier de partenariat pour rapprocher les grands acteurs industriels et les élèves ingénieurs.",
-  mediaRoundTitle: "Table Ronde : Renforcer le Continuum Formation - Recherche - Innovation au Maroc",
-  mediaRoundText: "Affiche officielle des intervenants à la Soirée Annuelle Evolutive Learning Factories. Prise de parole en tant que Président de l'Union des Élèves aux côtés de Pr. Wafa Skalli (Fondatrice Institut Charpak), Faouzi Annajah (CEO NamX) et des directeurs de recherche.",
-  mediaStageAhTitle: "Échanges et Vision d'Ingénierie sur Scène lors de la Soirée SEBN_MA",
-  mediaStageAhText: "Intervention en direct sur scène aux côtés des professeurs et directeurs industriels pour débattre des exigences de l'excellence opérationnelle, de l'industrialisation avancée et du rôle des élèves ingénieurs Arts et Métiers.",
-  mediaEamrTitle: "Soirée Annuelle Evolutive Learning Factories & Partenariats Industriels",
-  mediaEamrText: "Vue d'ensemble de la soirée annuelle et des tables rondes à l'auditorium d'Arts et Métiers Rabat. Un événement d'exception renforçant les ponts entre l'excellence académique et les leaders de l'industrie aéronautique et automobile.",
-  media1Title: "Forum Job Dating EAMR 2e Édition : Remerciements aux Partenaires & Sponsors",
-  media1Text: "Retour officiel de l'École Arts et Métiers Campus de Rabat sur le succès de la 2e édition du Job Dating. Une journée d'échanges fructueux entre plus de 40 partenaires industriels (aéronautique, automobile, tech) et les élèves ingénieurs.",
-  media2Title: "Présentation de l'Équipe d'Organisation & Dossier de Partenariat Job Dating",
-  media2Text: "En tant que Pilote général du Job Dating, présentation officielle du dossier de partenariat, de la vision stratégique de l'événement et de l'équipe de coordination (15 responsables de pôles logistique, communication et partenariats).",
-  media3Title: "Table Ronde : Renforcer le Continuum Formation - Recherche - Innovation au Maroc",
-  media3Text: "Intervention en tant qu'élève ingénieur et Président de l'Union des Élèves lors de la Soirée Annuelle Evolutive Learning Factories aux côtés de Pr. Wafa Skalli (Fondatrice Institut de Biomécanique), Faouzi Annajah (CEO NamX), Rachid El Bouazzaoui et directeurs industriels.",
-  media4Title: "Vision d'Ingénierie & Engagement à l'École des Arts et Métiers",
-  media4Text: "Échanges sur les grands enjeux de l'industrialisation, de la transition numérique et de l'excellence opérationnelle, portant la voix des élèves ingénieurs Arts et Métiers vers les défis et exigences de l'aéronautique de demain.",
-  jobDatingTeamLabel: "Équipe Pilote Job Dating 2026",
-  jobDatingGroupLabel: "40+ Partenaires & Élèves EAMR",
-  roundTableLabel: "Speaker Table Ronde — Pr. Wafa Skalli & NamX CEO",
-  sebnStageLabel: "Soirée Annuelle Evolutive Learning Factories",
-  jobDatingTitle: "Chef de Projet / Pilote — Forum Job Dating (2e Édition)",
-  jobDatingText: "Pilotage général de la 2e édition du Job Dating à Arts et Métiers campus de Rabat : coordination d'un forum entreprises de 40+ partenaires industriels, management de 15 responsables de pôles et pilotage budgétaire."
+  portraitAlt: "Portrait d’Ahmed El Hicho devant un hélicoptère",
+  media1Alt: "Participants et partenaires du Job Dating à Arts et Métiers Rabat",
+  media2Alt: "Équipe d’organisation du Job Dating à Arts et Métiers Rabat",
+  media3Alt: "Ahmed El Hicho intervenant lors d’une table ronde à Arts et Métiers Rabat",
+  media1Title: "Job Dating : plus de 40 partenaires et 250 élèves ingénieurs",
+  media1Text: "J’ai coordonné l’organisation générale avec 15 responsables de pôles. Cette publication du campus permet de vérifier l’événement et les partenaires présents.",
+  media2Title: "Préparation du dossier de partenariat et répartition des pôles",
+  media2Text: "Mon rôle a consisté à coordonner les pôles partenariats, logistique et communication, puis à suivre l’avancement et le budget avec leurs responsables.",
+  media3Title: "Table ronde sur le continuum formation–recherche–innovation",
+  media3Text: "En tant que président de l’Association des Élèves, j’ai représenté le point de vue des étudiants lors d’un échange avec enseignants, chercheurs et industriels.",
+  jobDatingTeamLabel: "Équipe d’organisation · 15 responsables",
+  jobDatingGroupLabel: "Forum entreprises · coordination générale",
+  roundTableLabel: "Intervenant · représentation étudiante",
+  jobDatingTitle: "Chef de projet — Forum Job Dating, 2e édition",
+  jobDatingText: "Coordination du forum avec plus de 40 partenaires et 250 élèves ingénieurs, animation de 15 responsables de pôles et suivi du budget de l’événement."
 });
 
 Object.assign(translations.en, {
   quickViewBtn: "👁️ Technical overview",
-  standardsEyebrow: "Industrial Standards & Requirements",
-  standardsTitle: "Aerospace Standards & Engineering Methodologies",
-  pillar1Title: "Quality Standards & Compliance",
-  pillar2Title: "Industrialization & Operations (FAL)",
-  pillar3Title: "Advanced Technologies & Processes",
+  skipLink: "Skip to content",
+  homeAria: "Ahmed El Hicho home",
+  menuText: "Menu",
+  mainNavAria: "Main navigation",
+  metricsAria: "Key figures",
+  filterProjectsAria: "Filter projects",
+  reportLink: "Read the report (PDF) ↗",
+  modalReportLink: "Read the full report (PDF) ↗",
+  moreProjectsButton: "View 9 more projects",
+  lessProjectsButton: "Hide the 9 additional projects",
+  moreProjectsSummary: "View 9 more academic projects",
+  standardsEyebrow: "Concepts & technology watch",
+  standardsTitle: "Standards studied — these are not certifications.",
+  pillar1Title: "Aerospace quality",
+  pillar2Title: "Aerospace industrialization",
+  pillar3Title: "Topics I follow",
+  langArabic: "Arabic · native language",
+  langFrench: "French · fluent",
+  langEnglish: "English · B2",
   copyEmailSuccess: "Email copied to clipboard!",
   vcardBtn: "📇 Export contact card (.vcf)",
-  modalContextTitle: "Context & Industrial Challenge",
-  modalMethodTitle: "Methodology & Technical Deployment",
-  modalResultsTitle: "Key Results & Operational Value",
-  modalToolsTitle: "Environment & Tools",
+  modalContextTitle: "Context and objective",
+  modalMethodTitle: "Method and implementation",
+  modalResultsTitle: "Results and limitations",
+  modalToolsTitle: "Tools used",
   modalCloseBtn: "Close",
-  searchPlaceholder: "Search by tool, standard or keyword (e.g. Abaqus, Tulip, Python, QRQC...)",
-    navMedia: "Media & Talks",
-  mediaEyebrow: "Media & LinkedIn News",
-  mediaTitle: "Conferences, Industrial Event Leadership & Institutional Talks.",
-  mediaTagEvent: "Institutional Event",
-  mediaTagPilot: "General Pilot / Event Lead",
-  mediaTagPanel: "Speaker / Industrial Panel",
-  mediaTagVision: "Leadership & Engineering Vision",
+  searchPlaceholder: "Search by tool, method or keyword (e.g. Abaqus, Tulip, Python)",
+  searchAria: "Search projects",
+  clearSearchAria: "Clear the search",
+  themeAria: "Change theme",
+  themeTitle: "Change theme",
+  langAria: "Display the website in French",
+  menuAria: "Open or close the navigation menu",
+  copyEmailAria: "Copy the email address",
+  copyEmailTitle: "Copy the email address",
+  modalCloseAria: "Close the project overview",
+  p1Context: "Academic project · three-person team · semi-industrial setting",
+  p2Context: "Academic project · prototype and simulated scenarios",
+  p3Context: "DOGA FZ internship · functional prototype without quantitative evaluation",
+  p4Context: "Academic lab · model compared with test data",
+  p5Context: "Academic mini-project · WAAM dataset",
+  p6Context: "Academic project · Granta eco-audit",
+  p6R1: "repairability",
+  p6R2: "recyclability",
+  p7Context: "Academic lab · test-bench balancing",
+  p8Context: "Academic project · energy study and optimization",
+  p9Context: "Academic lab · FEMM simulation",
+  p10Context: "Academic project · simplified causal model",
+  p11Context: "Academic project · Taguchi L8 design",
+  p12Context: "Academic project · Access database for CAN 2025",
+  p7Title: "One- and two-plane rotor balancing",
+  p7Text: "Vibration diagnosis, static balancing in one plane and dynamic balancing in two planes using the influence-coefficient method and piezoelectric test-bench measurements.",
+  p7Impact: "After correction: 4 mV on P1 • 0.07 mV on P2",
+  p7Details: "The work also shows cross-influences between the two planes: correcting P1 changes the response at P2. The intentionally simple graphical method helps explain the physics before automation.",
+  p8Title: "E-bike energy study and brake-disc optimization",
+  p8Text: "Vehicle power balance, calculation of the governing braking load, then topological optimization of the disc under displacement, stress and minimum-dimension constraints.",
+  p8R1: "km/h reference speed",
+  p8R2: "N·m at the disc",
+  p8Details: "The project links energy assumptions to a CAD–HyperMesh–OptiStruct workflow. Results remain those of an academic model and depend on the selected load case.",
+  p9Title: "PMSM stator field and torque in FEMM",
+  p9Text: "Simulation of the fields created by each phase, Concordia transformation and torque calculation as a function of stator-field orientation.",
+  p9R1: "N·m/A measured",
+  p9R2: "2D simulation",
+  p9Details: "The report obtains a torque constant close to 0.15 N·m/A in the studied model. This value characterizes the simulation; it is not a machine-efficiency figure.",
+  p10Title: "Causal model of an electric powertrain",
+  p10Text: "Modeling of an ideal battery, chopper, DC motor, gearbox, wheel and the vehicle’s longitudinal dynamics.",
+  p10Impact: "Motor torque • vehicle speed • aerodynamic force",
+  p10Details: "The model makes causal relationships explicit but relies on strong assumptions: constant battery voltage, lossless converter and gearbox, and linearized vehicle resistance.",
+  p11Title: "Taguchi L8 optimization of cutting conditions",
+  p11Text: "Eight turning tests on 2017 aluminum to study cutting speed, feed rate and depth of cut, using a signal-to-noise ratio and ANOVA.",
+  p11Impact: "Feed rate: 78.05% contribution • optimum A1B1C1",
+  p11Details: "For this test set, feed rate is the dominant factor. The selected conditions are 250 m/min, 0.15 mm/rev and 0.5 mm; they remain specific to the material, machine and lab protocol.",
+  p12Title: "Relational database for CAN 2025",
+  p12Text: "MERISE conceptual and logical modeling followed by a Microsoft Access implementation for teams, players, stadiums, matches and participation records, with queries, forms and printable reports.",
+  p12R1: "conceptual and logical models",
+  p12R2: "queries and forms",
+  p12Details: "The report demonstrates referential integrity and report generation. Export to Excel or Power BI is presented as a possible next step, not as a deployed feature.",
+  navMedia: "Field involvement",
+  mediaEyebrow: "Field involvement",
+  mediaTitle: "Three public records of my role in team projects.",
+  mediaTagEvent: "School–industry meeting",
+  mediaTagPilot: "Event coordination",
+  mediaTagPanel: "Roundtable participant",
   mediaBtnText: "View post on LinkedIn ↗",
-  mediaTagHult: "Campus Director — Hult Prize",
-  mediaHultTitle: "Hult Prize at Arts et Métiers Rabat: A Landmark Event for Innovation and Entrepreneurship",
-  mediaHultText: "Collective group photo of the grand finale and participants inside the Arts et Métiers Rabat auditorium. Organizing and mentoring engineering students on high-impact technological and social challenges.",
-  mediaJobTeamTitle: "Organizing Committee & Corporate Partnership Deck for Job Dating 2nd Edition",
-  mediaJobTeamText: "Official poster of the 2nd Edition Job Dating organizing team (as General Pilot and Event Lead). Deploying the corporate partnership deck to bridge top industrial leaders and engineering students.",
-  mediaRoundTitle: "Roundtable: Strengthening the Education - Research - Innovation Continuum in Morocco",
-  mediaRoundText: "Official speaker poster for the Evolutive Learning Factories Annual Gala. Speaking as Student Union President alongside Pr. Wafa Skalli (Charpak Institute Founder), Faouzi Annajah (NamX CEO), and research directors.",
-  mediaStageAhTitle: "On-Stage Engineering Vision & Discussions at the SEBN_MA Annual Gala",
-  mediaStageAhText: "Direct on-stage panel participation alongside professors and industrial directors, discussing operational excellence requirements, advanced industrialization, and the role of Arts et Métiers engineers.",
-  mediaEamrTitle: "Evolutive Learning Factories Annual Gala & Industrial Partnerships",
-  mediaEamrText: "Wide stage overview of the annual gala and panel discussions at the Arts et Métiers Rabat auditorium. An exceptional event building bridges between academic excellence and aerospace/automotive leaders.",
-  media1Title: "EAMR Job Dating 2nd Edition: Corporate Partners & Sponsors Recognition",
-  media1Text: "Official recap from Arts et Métiers Rabat Campus celebrating the success of the 2nd Job Dating forum. A fruitful day connecting over 40 corporate partners (aerospace, automotive, tech) with engineering students.",
-  media2Title: "Organizing Committee & Corporate Partnership Deck for Job Dating",
-  media2Text: "As the General Lead of the Job Dating event, presenting the official partnership brochure, strategic vision, and the organizing committee of 15 team leads (logistics, communication, corporate relations).",
-  media3Title: "Roundtable: Strengthening the Education - Research - Innovation Continuum in Morocco",
-  media3Text: "Panel speaker as engineering student and Student Union President at the Annual Evolutive Learning Factories Gala, alongside Pr. Wafa Skalli (Charpak Biomechanics Institute Founder), Faouzi Annajah (NamX CEO), and industrial directors.",
-  media4Title: "Engineering Vision & Leadership at Arts et Métiers School",
-  media4Text: "Discussions on key industrialization challenges, digital transformation, and operational excellence, carrying the voice of Arts et Métiers engineering students toward tomorrow's aerospace requirements.",
-  jobDatingTeamLabel: "Job Dating 2026 Organizing Lead",
-  jobDatingGroupLabel: "40+ Corporate Partners & EAMR Students",
-  roundTableLabel: "Panel Speaker — Pr. Wafa Skalli & NamX CEO",
-  sebnStageLabel: "Annual Evolutive Learning Factories Gala",
-  jobDatingTitle: "Project Manager / Pilot — Job Dating Forum (2nd Edition)",
-  jobDatingText: "General pilot and coordinator for the 2nd Job Dating forum at Arts et Métiers Rabat campus: managed 40+ industrial corporate partners, led 15 team leads, and oversaw overall budgeting and operations."
+  portraitAlt: "Portrait of Ahmed El Hicho in front of a helicopter",
+  media1Alt: "Participants and partners at the Job Dating forum at Arts et Métiers Rabat",
+  media2Alt: "Job Dating organizing team at Arts et Métiers Rabat",
+  media3Alt: "Ahmed El Hicho speaking at a roundtable at Arts et Métiers Rabat",
+  media1Title: "Job Dating: over 40 partners and 250 engineering students",
+  media1Text: "I coordinated the overall organization with 15 area leads. This campus post provides a public record of the event and the partners involved.",
+  media2Title: "Preparing the partnership pack and assigning team areas",
+  media2Text: "My role was to coordinate the partnerships, logistics and communication teams, then track progress and the budget with their leads.",
+  media3Title: "Roundtable on the education–research–innovation continuum",
+  media3Text: "As President of the Student Association, I represented the student perspective in a discussion with lecturers, researchers and industry representatives.",
+  jobDatingTeamLabel: "Organizing team · 15 area leads",
+  jobDatingGroupLabel: "Company forum · overall coordination",
+  roundTableLabel: "Speaker · student representation",
+  jobDatingTitle: "Project lead — Job Dating Forum, 2nd edition",
+  jobDatingText: "Coordinated the forum with more than 40 partners and 250 engineering students, led 15 area coordinators and tracked the event budget."
 });
 
 const langToggle = document.querySelector(".lang-toggle");
 const langActive = document.querySelector(".lang-active");
 
 function setLanguage(lang) {
+  const dictionary = translations[lang];
+  if (!dictionary) return;
+
   document.documentElement.lang = lang;
   document.documentElement.dataset.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
-    if (translations[lang] && translations[lang][key]) node.textContent = translations[lang][key];
+    if (dictionary[key]) node.textContent = dictionary[key];
   });
+
+  [
+    ["data-i18n-placeholder", "placeholder"],
+    ["data-i18n-aria-label", "aria-label"],
+    ["data-i18n-title", "title"],
+    ["data-i18n-alt", "alt"]
+  ].forEach(([keyAttribute, translatedAttribute]) => {
+    document.querySelectorAll(`[${keyAttribute}]`).forEach((node) => {
+      const key = node.getAttribute(keyAttribute);
+      if (key && dictionary[key]) node.setAttribute(translatedAttribute, dictionary[key]);
+    });
+  });
+
   const sInput = document.getElementById("projectSearchInput");
-  if (sInput && translations[lang] && translations[lang].searchPlaceholder) {
-    sInput.placeholder = translations[lang].searchPlaceholder;
+  if (sInput && dictionary.searchPlaceholder) {
+    sInput.placeholder = dictionary.searchPlaceholder;
   }
-  langActive.textContent = lang.toUpperCase();
+  if (langActive) langActive.textContent = lang.toUpperCase();
   const inactive = lang === "fr" ? "EN" : "FR";
   if (langToggle && langToggle.lastElementChild) langToggle.lastElementChild.textContent = inactive;
+
+  const secondaryToggle = document.getElementById("toggleSecondaryProjects");
+  if (secondaryToggle) {
+    const labelKey = secondaryToggle.getAttribute("aria-expanded") === "true"
+      ? "lessProjectsButton"
+      : "moreProjectsButton";
+    secondaryToggle.dataset.i18n = labelKey;
+    secondaryToggle.textContent = dictionary[labelKey];
+  }
+
   localStorage.setItem("portfolio-language", lang);
+  document.dispatchEvent(new CustomEvent("portfolio-language-change", { detail: { lang } }));
 }
 
-langToggle.addEventListener("click", () => {
-  const next = document.documentElement.lang === "fr" ? "en" : "fr";
-  setLanguage(next);
-});
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    const next = document.documentElement.lang === "fr" ? "en" : "fr";
+    setLanguage(next);
+  });
+}
 
 const savedLanguage = localStorage.getItem("portfolio-language");
 if (savedLanguage === "en") setLanguage("en");
@@ -274,19 +409,35 @@ nav.querySelectorAll("a").forEach((link) => {
 const filters = document.querySelectorAll(".filter-button");
 const cards = document.querySelectorAll(".project-card");
 let currentCategoryFilter = "all";
+let secondaryProjectsExpanded = false;
 const searchInput = document.getElementById("projectSearchInput");
 const clearSearchBtn = document.getElementById("clearSearchBtn");
+const toggleSecondaryProjectsBtn = document.getElementById("toggleSecondaryProjects");
+
+function updateSecondaryProjectsButton() {
+  if (!toggleSecondaryProjectsBtn) return;
+  const lang = document.documentElement.lang === "en" ? "en" : "fr";
+  const labelKey = secondaryProjectsExpanded ? "lessProjectsButton" : "moreProjectsButton";
+  toggleSecondaryProjectsBtn.setAttribute("aria-expanded", String(secondaryProjectsExpanded));
+  toggleSecondaryProjectsBtn.dataset.i18n = labelKey;
+  toggleSecondaryProjectsBtn.textContent = translations[lang][labelKey];
+}
 
 function applyFilters() {
   const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+  const hasActiveCriteria = query !== "" || currentCategoryFilter !== "all";
   if (clearSearchBtn) clearSearchBtn.style.display = query.length > 0 ? "block" : "none";
+  if (toggleSecondaryProjectsBtn) toggleSecondaryProjectsBtn.hidden = hasActiveCriteria;
 
   cards.forEach((card) => {
     const categories = (card.dataset.category || "").split(" ");
     const matchesCategory = currentCategoryFilter === "all" || categories.includes(currentCategoryFilter);
     const textContent = card.textContent.toLowerCase();
     const matchesQuery = query === "" || textContent.includes(query);
-    card.hidden = !(matchesCategory && matchesQuery);
+    const canShowSecondary = card.dataset.secondary !== "true"
+      || secondaryProjectsExpanded
+      || hasActiveCriteria;
+    card.hidden = !(matchesCategory && matchesQuery && canShowSecondary);
   });
 }
 
@@ -309,6 +460,16 @@ if (clearSearchBtn) {
     if (searchInput) searchInput.focus();
   });
 }
+if (toggleSecondaryProjectsBtn) {
+  toggleSecondaryProjectsBtn.addEventListener("click", () => {
+    secondaryProjectsExpanded = !secondaryProjectsExpanded;
+    updateSecondaryProjectsButton();
+    applyFilters();
+  });
+}
+
+updateSecondaryProjectsButton();
+applyFilters();
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -336,13 +497,14 @@ const projectQuickViewData = {
     categoryEn: "Industry 4.0 / MES",
     titleFr: "MES sur Tulip — Evolutive Lean Factory",
     titleEn: "Tulip MES — Evolutive Lean Factory",
-    contextFr: "Assemblage de vérins pneumatiques en 10 opérations, avec fortes exigences de traçabilité unitaire, d'horodatage par poste et de maîtrise du TRG en temps réel.",
-    contextEn: "Assembly line for pneumatic cylinders across 10 operations, requiring strict unit traceability, timestamping and real-time OEE tracking.",
-    methodFr: "Conception d'un système MES de niveau 3 selon ISA-95 et MESA, interconnectant 11 tables relationnelles dans Tulip. Intégration d'un module qualité Poka-Yoke et d'un tableau de bord superviseur.",
-    methodEn: "Level 3 MES design based on ISA-95 and MESA, linking 11 relational tables in Tulip. Implemented Poka-Yoke quality modules and a live supervisor dashboard.",
-    resultsFr: "Digitalisation complète de 21 sous-opérations, suppression du support papier et visibilité directe sur l'encours (WIP) transposable sur ligne d'assemblage aéronautique (FAL).",
-    resultsEn: "Digitized 21 sub-operations, eliminated paper reporting and enabled real-time WIP visibility transposable to aerospace Final Assembly Lines.",
+    contextFr: "Projet académique mené à trois dans un environnement semi-industriel d'assemblage de vérins pneumatiques comportant 10 opérations.",
+    contextEn: "Three-person academic project in a semi-industrial environment for pneumatic-cylinder assembly across 10 operations.",
+    methodFr: "Conception dans Tulip d'une architecture de 11 tables, d'interfaces opérateur et superviseur, d'un suivi par ordre de fabrication et d'un module qualité.",
+    methodEn: "Designed 11 linked Tulip tables, operator and supervisor interfaces, work-order tracking and a quality module.",
+    resultsFr: "Le prototype structure le suivi des opérations et de l'encours. Les essais ont révélé deux ruptures de traçabilité, corrigées par l'équipe ; des limites restent à traiter avant un usage continu.",
+    resultsEn: "The prototype structures operation and work-in-progress tracking. Testing revealed two traceability breaks, which the team corrected; further limitations remain before continuous use.",
     tags: ["Tulip", "MES", "ISA-95", "MESA", "Poka-Yoke", "Lean"],
+    tagsEn: ["Tulip", "MES", "ISA-95", "MESA", "Poka-Yoke", "Lean"],
     reportPdf: "assets/reports/P01_Rapport_MES_Tulip.pdf"
   },
   p2: {
@@ -350,13 +512,14 @@ const projectQuickViewData = {
     categoryEn: "Industry 4.0 / Lean",
     titleFr: "Système ANDON digital — Ligne Karakuri A1",
     titleEn: "Digital ANDON System — Karakuri Line A1",
-    contextFr: "Ligne d'assemblage Karakuri nécessitant une alerte immédiate en cas d'aléa (qualité, matière, maintenance) et une mesure objective des temps d'arrêt pour alimenter le QRQC.",
-    contextEn: "Karakuri assembly line requiring instant alerting for shop-floor issues and precise downtime tracking to feed QRQC continuous improvement loops.",
-    methodFr: "Développement d'une application web temps réel (Flask/SQLite) gérant une machine à états (OPEN, ACK, ARRIVED, CLOSED). Priorisation automatique, calcul des SLA et clôture conditionnée à une cause 5M.",
-    methodEn: "Developed a real-time web app (Flask/SQLite) driving a state machine (OPEN-ACK-ARRIVED-CLOSED). Automated alerting priorities and SLA enforcement linked to 5M root cause analyses.",
-    resultsFr: "Réactivité de la maintenance fiabilisée, mesure précise des indicateurs MTTA et MTTR et capitalisation rigoureuse des causes d'aléa.",
-    resultsEn: "Streamlined maintenance response, exact MTTA/MTTR measurement and structured tracking of root causes.",
+    contextFr: "Prototype académique destiné à représenter le traitement d'une alerte qualité, matière ou maintenance sur une ligne Karakuri.",
+    contextEn: "Academic prototype representing the handling of quality, material or maintenance alerts on a Karakuri line.",
+    methodFr: "Développement d'une application Flask/SQLite avec API REST et cycle OPEN–ACK–ARRIVED–CLOSED. Calcul de MTTA, MTTR et SLA, puis saisie d'une cause 5M et d'une action corrective.",
+    methodEn: "Built a Flask/SQLite application with a REST API and an OPEN–ACK–ARRIVED–CLOSED workflow. It calculates MTTA, MTTR and SLA data, then records a 5M cause and corrective action.",
+    resultsFr: "Le parcours et les calculs ont été vérifiés sur des scénarios simulés. Aucun gain de réactivité ou de disponibilité n'a été mesuré sur une ligne en production.",
+    resultsEn: "The workflow and calculations were checked through simulated scenarios. No response-time or availability improvement was measured on a production line.",
     tags: ["Flask", "SQLite", "API REST", "ANDON", "QRQC", "5M / Ishikawa"],
+    tagsEn: ["Flask", "SQLite", "REST API", "ANDON", "QRQC", "5M / Ishikawa"],
     reportPdf: "assets/reports/P02_Rapport_Andon_Digital.pdf"
   },
   p3: {
@@ -364,13 +527,14 @@ const projectQuickViewData = {
     categoryEn: "Applied AI & Data",
     titleFr: "Reporting terrain par audio et IA — Whisper & NLP",
     titleEn: "Voice-to-Data Industrial Reporting — Whisper & NLP",
-    contextFr: "Perte d'informations techniques après intervention en atelier et temps de saisie administrative excessif pour la rédaction des rapports d'ingénierie.",
-    contextEn: "Loss of technical details post-intervention and excessive administrative burden formatting engineering field reports.",
-    methodFr: "Pipeline d'analyse vocale par OpenAI Whisper, extraction structurée de 17 champs métiers par traitement automatique du langage (NLP) et génération automatisée d'un rapport JSON/Excel exploitable.",
-    methodEn: "Audio pipeline utilizing OpenAI Whisper, structured extraction of 17 engineering fields via NLP and automated JSON/Excel report generation.",
-    resultsFr: "Réduction drastique du temps d'administration, fiabilisation des remontées techniques terrain et documentation structurée intégrable dans un PLM.",
-    resultsEn: "Dramatic reduction in administrative time, accurate field data capture and structured documentation ready for PLM integration.",
+    contextFr: "Prototype développé pendant le stage DOGA FZ pour explorer la transformation d'un compte rendu vocal en données structurées.",
+    contextEn: "Prototype developed during the DOGA FZ internship to explore converting a spoken field report into structured data.",
+    methodFr: "Transcription avec Whisper, extraction NLP de 17 champs métier et génération de fichiers JSON et Excel pour revue par l'utilisateur.",
+    methodEn: "Whisper transcription, NLP extraction of 17 business fields, and JSON and Excel output for user review.",
+    resultsFr: "Le flux fonctionne sous forme de prototype. Le gain de temps, la précision d'extraction et la robustesse aux conditions d'atelier n'ont pas encore été évalués quantitativement.",
+    resultsEn: "The workflow runs as a prototype. Time savings, extraction accuracy and robustness to shop-floor conditions have not yet been evaluated quantitatively.",
     tags: ["OpenAI Whisper", "Python", "NLP", "JSON", "Audit et Qualité"],
+    tagsEn: ["OpenAI Whisper", "Python", "NLP", "JSON", "Audit and quality"],
     reportPdf: "assets/reports/P03_Rapport_Reporting_Audio_IA.pdf"
   },
   p4: {
@@ -378,13 +542,14 @@ const projectQuickViewData = {
     categoryEn: "Mechanics & Simulation",
     titleFr: "Analyse modale de structures — Abaqus FEA",
     titleEn: "Modal Analysis of Structures — Abaqus FEA",
-    contextFr: "Caractérisation dynamique et prévention des risques vibratoires sur structures mécaniques, enjeu critique pour éviter la résonance, la fatigue et le flottement aéroélastique.",
-    contextEn: "Dynamic structural characterization to prevent vibration risks, critical in aerospace to avoid resonance, structural fatigue and aeroelastic flutter.",
+    contextFr: "TP de caractérisation dynamique d'une structure, avec comparaison des fréquences propres calculées sous Abaqus aux valeurs issues des essais.",
+    contextEn: "Structural dynamics lab comparing natural frequencies calculated in Abaqus with test values.",
     methodFr: "Modélisation par éléments finis sous Abaqus, étude de convergence spatiale du maillage, extraction et interprétation physique des modes propres (flexion, torsion, couplage).",
     methodEn: "Finite element modeling in Abaqus, mesh convergence study, and physical interpretation of natural eigenmodes (bending, torsion, coupled modes).",
-    resultsFr: "Identification précise des fréquences critiques et des zones nodales, validation de la marge de sécurité dynamique par rapport au spectre d'excitation.",
-    resultsEn: "Precise identification of critical frequencies and nodal zones, validating dynamic safety margins against excitation frequency spectra.",
+    resultsFr: "Les écarts calcul–essai observés vont de 1,1 % à 7,2 % selon le mode. L'analyse modale constitue une entrée pour une étude aéroélastique, mais ne valide pas le flottement.",
+    resultsEn: "Observed calculation-to-test differences range from 1.1% to 7.2%, depending on the mode. Modal analysis is an input to aeroelastic work, but does not validate flutter.",
     tags: ["Abaqus FEA", "Éléments finis", "Vibrations", "Dynamique des structures"],
+    tagsEn: ["Abaqus FEA", "Finite elements", "Vibrations", "Structural dynamics"],
     reportPdf: "assets/reports/P04_Rapport_Analyse_Modale_Abaqus.pdf"
   },
   p5: {
@@ -392,111 +557,119 @@ const projectQuickViewData = {
     categoryEn: "AI, Data & Processes",
     titleFr: "Optimisation numérique d'un SVM par Uzawa — WAAM",
     titleEn: "Numerical SVM Optimization via Uzawa — WAAM",
-    contextFr: "Contrôle non destructif (CND) et classification automatisée des cordons de soudure issus de fabrication additive arc-fil (WAAM) sur pièces structurales.",
-    contextEn: "Non-destructive testing (NDT) and automated classification of Wire Arc Additive Manufacturing (WAAM) weld beads on structural parts.",
+    contextFr: "Mini-projet académique d'optimisation sous contraintes appliqué à un jeu de données WAAM fourni pour le TP.",
+    contextEn: "Academic constrained-optimization mini-project using a WAAM dataset supplied for the course.",
     methodFr: "Implémentation from scratch en Python/NumPy de l'algorithme primal-dual d'Uzawa pour résoudre le problème d'optimisation sous contraintes d'un séparateur à vaste marge (SVM).",
     methodEn: "From-scratch implementation in Python/NumPy of the Uzawa primal-dual algorithm to solve constrained optimization for Support Vector Machine (SVM) classification.",
-    resultsFr: "Vérification mathématique de convergence de l'algorithme, identification fine des vecteurs supports et classification robuste des anomalies de soudure.",
-    resultsEn: "Mathematical convergence verification, precise support vector isolation and robust classification of weld bead anomalies.",
+    resultsFr: "L'algorithme converge et sépare les deux classes du jeu étudié, avec identification des vecteurs supports. Ce résultat n'a pas été testé sur d'autres données industrielles.",
+    resultsEn: "The algorithm converges and separates the two classes in the studied dataset while identifying support vectors. It was not tested on other industrial data.",
     tags: ["Python", "NumPy", "Algorithme d'Uzawa", "SVM", "WAAM"],
+    tagsEn: ["Python", "NumPy", "Uzawa algorithm", "SVM", "WAAM"],
     reportPdf: "assets/reports/P05_Rapport_Optimisation_SVM_Uzawa.pdf"
   },
   p6: {
     categoryFr: "Éco-conception & Matériaux",
     categoryEn: "Eco-design & Materials",
-    titleFr: "Éco-conception & ACV d'un système électromécanique",
-    titleEn: "Eco-design & LCA of an Electromechanical System",
-    contextFr: "Quantification rigoureuse de l'empreinte carbone et énergétique sur le cycle de vie complet d'un véhicule urbain léger (trottinette électrique).",
-    contextEn: "Rigorous carbon and primary energy footprint quantification across the lifecycle of an urban electromechanical system (e-scooter).",
-    methodFr: "Modélisation ACV sous Ansys Granta EduPack sur un cycle de 4 ans (production, usage, fin de vie). Sélection multicritère d'alliages et principes de Design for Disassembly.",
-    methodEn: "LCA modeling in Ansys Granta EduPack over a 4-year cycle (production, use, end-of-life). Multi-criteria material selection and Design for Disassembly.",
-    resultsFr: "Impact global quantifié à 2 950 MJ et 209 kg CO2-eq. Stratégie de recyclage des métaux et batteries permettant une réduction significative du bilan net.",
-    resultsEn: "Total footprint quantified at 2,950 MJ and 209 kg CO2-eq. Formulated metal/battery recycling strategies yielding significant net impact reductions.",
-    tags: ["Ansys Granta", "Analyse de cycle de vie (ACV)", "Éco-conception", "Matériaux"],
+    titleFr: "Éco-audit d’une trottinette électrique",
+    titleEn: "Electric-Scooter Eco-Audit",
+    contextFr: "Projet académique d'éco-audit d'une trottinette électrique, de sa fabrication à sa fin de vie.",
+    contextEn: "Academic eco-audit of an electric scooter from manufacturing through end of life.",
+    methodFr: "Modélisation sous Ansys Granta EduPack, calcul de l'empreinte carbone, évaluation de la réparabilité et de la recyclabilité, puis comparaison de scénarios d'amélioration.",
+    methodEn: "Ansys Granta EduPack modeling, carbon-footprint calculation, repairability and recyclability assessment, followed by comparison of improvement scenarios.",
+    resultsFr: "Le rapport estime 376 kg CO₂-eq par produit, une réparabilité de 3,7/10 et une recyclabilité de 85,8 %. Le scénario combiné étudié réduit l'impact calculé de 58 %.",
+    resultsEn: "The report estimates 376 kg CO₂-eq per product, a 3.7/10 repairability score and 85.8% recyclability. The combined scenario studied reduces the calculated impact by 58%.",
+    tags: ["Ansys Granta", "Éco-audit", "Réparabilité", "Recyclabilité"],
+    tagsEn: ["Ansys Granta", "Eco audit", "Repairability", "Recyclability"],
     reportPdf: "assets/reports/P06_Rapport_Ecoconception_ACV.pdf"
   },
   p7: {
     categoryFr: "Mécanique & Vibrations",
     categoryEn: "Mechanics & Vibrations",
-    titleFr: "Équilibrage dynamique et réduction des vibrations sur rotor",
-    titleEn: "Dynamic Rotor Balancing & Vibration Reduction",
-    contextFr: "Vibrations et balourd dynamique sur arbre tournant à haute vitesse, induisant fatigue des paliers et usure prématurée (problématique centrale sur turbomachines).",
-    contextEn: "High-speed rotating shaft vibrations and dynamic unbalance leading to bearing fatigue and premature wear (core challenge in turbomachinery).",
-    methodFr: "Mesure expérimentale de phase et d'amplitude vibratoire, calcul matriciel des masses d'équilibrage dans deux plans et validation expérimentale sur banc d'essai mécanique.",
-    methodEn: "Experimental phase/amplitude vibration measurements, dual-plane correction mass matrix calculations and test-bench experimental validation.",
-    resultsFr: "Réduction de l'amplitude vibratoire sous le seuil d'admissibilité ISO 10816 et allongement de la durée de vie théorique des roulements.",
-    resultsEn: "Vibration amplitude reduced below ISO 10816 thresholds, significantly extending theoretical bearing operational lifespan.",
-    tags: ["Mécanique des vibrations", "Équilibrage dynamique", "Banc d'essai", "ISO 10816"],
+    titleFr: "Équilibrage statique et dynamique d'un rotor",
+    titleEn: "Static and Dynamic Rotor Balancing",
+    contextFr: "TP de mécanique vibratoire consacré au diagnostic d'un balourd et à sa correction sur un banc de rotor rigide.",
+    contextEn: "Mechanical-vibration lab focused on diagnosing and correcting unbalance on a rigid-rotor test bench.",
+    methodFr: "Mesure de l'amplitude et de la phase, équilibrage sur un puis deux plans et calcul des masselottes par la méthode des coefficients d'influence.",
+    methodEn: "Amplitude and phase measurements, one- then two-plane balancing, and correction-mass calculations using the influence-coefficient method.",
+    resultsFr: "Après correction, le rapport retient 4 mV sur P1 et 0,07 mV sur P2 à 40 Hz. La conformité à un seuil normalisé et l’effet sur la durée de vie des roulements n’ont pas été évalués.",
+    resultsEn: "After correction, the report records 4 mV on P1 and 0.07 mV on P2 at 40 Hz. Compliance with a standardized threshold and the effect on bearing life were not evaluated.",
+    tags: ["Mécanique des vibrations", "Équilibrage 1 et 2 plans", "Coefficients d'influence", "Banc d'essai"],
+    tagsEn: ["Mechanical vibrations", "One- and two-plane balancing", "Influence coefficients", "Test bench"],
     reportPdf: "assets/reports/P07_Rapport_Equilibrage_Dynamique.pdf"
   },
   p8: {
-    categoryFr: "Conception & CAO",
-    categoryEn: "Design & CAD",
-    titleFr: "Conception mécanique et dimensionnement d'un VAE",
-    titleEn: "Mechanical Design & Sizing of an E-Bike (VAE)",
-    contextFr: "Conception complète d'un Vélo à Assistance Électrique (VAE) optimisé en masse, rigidité et ergonomie.",
-    contextEn: "Full mechanical design of an Electric Assist Bicycle optimized for structural weight, stiffness and rider ergonomics.",
-    methodFr: "Modélisation 3D sous SolidWorks/CATIA, dimensionnement analytique et par éléments finis du cadre sollicité au pédalage, freinage et chocs. Sélection des profils tubulaires.",
-    methodEn: "3D CAD modeling in SolidWorks/CATIA, analytical and FEA structural sizing of the frame under pedaling, braking and shock loads.",
-    resultsFr: "Validation de la tenue mécanique sous charge extrême (coefficient de sécurité > 2,5) tout en minimisant la masse globale du châssis.",
-    resultsEn: "Validated structural integrity under ultimate load cases (safety factor > 2.5) while minimizing overall chassis weight.",
-    tags: ["SolidWorks", "CATIA", "Conception mécanique", "RDM", "Éléments finis"],
+    categoryFr: "Conception & Énergétique",
+    categoryEn: "Design & Energy Systems",
+    titleFr: "Étude énergétique d’un VAE et optimisation du disque de frein",
+    titleEn: "E-Bike Energy Study and Brake-Disc Optimization",
+    contextFr: "Projet de conception avancée d'un VAE, fondé sur une puissance cycliste de 140 W et une cadence de référence de 1,1 Hz.",
+    contextEn: "Advanced e-bike design project based on 140 W of cyclist input and a reference cadence of 1.1 Hz.",
+    methodFr: "Étude de la dynamique et du bilan énergétique, calcul du cas de freinage dimensionnant, puis optimisation topologique du disque sous HyperMesh et OptiStruct.",
+    methodEn: "Dynamic and energy-balance study, calculation of the governing braking load, then topological optimization of the disc in HyperMesh and OptiStruct.",
+    resultsFr: "Le cas de référence conduit à 24,9 km/h et à un couple de 86,6 N·m au disque. Ces valeurs restent celles d’un modèle académique et dépendent des hypothèses de charge retenues.",
+    resultsEn: "The reference case gives 24.9 km/h and 86.6 N·m at the disc. These figures remain those of an academic model and depend on the selected load assumptions.",
+    tags: ["HyperMesh", "OptiStruct", "Bilan énergétique", "Optimisation topologique"],
+    tagsEn: ["HyperMesh", "OptiStruct", "Energy balance", "Topological optimization"],
     reportPdf: "assets/reports/P08_Rapport_Conception_VAE.pdf"
   },
   p9: {
-    categoryFr: "Électrotechnique & Propulsion",
-    categoryEn: "Electrotechnics & Propulsion",
-    titleFr: "Modélisation d'une MSAP pour propulsion électrique",
-    titleEn: "PMSM Modeling for Electric Propulsion",
-    contextFr: "Motorisation électrique de puissance par Machine Synchrone à Aimants Permanents (MSAP), brique technologique clé pour les architectures de propulsion hybrides ou drones électriques (UAV/eVTOL).",
-    contextEn: "Permanent Magnet Synchronous Machine (PMSM) electrical drive modeling, a foundational technology for hybrid propulsion architectures or electric drones (UAV/eVTOL).",
-    methodFr: "Modélisation sous MATLAB/Simulink des équations de Park (d-q), simulation du couplage électromagnétique et analyse du couple transitoire et permanent.",
-    methodEn: "MATLAB/Simulink modeling of Park (d-q) equations, electromagnetic field coupling simulations, and transient/steady-state torque response analysis.",
-    resultsFr: "Cartographie de rendement du moteur et validation de la stratégie de commande vectorielle pour minimiser les ondulations de couple.",
-    resultsEn: "Generated motor efficiency maps and validated vector control strategies to minimize torque ripple and maximize propulsion stability.",
-    tags: ["MATLAB", "Simulink", "MSAP / PMSM", "Propulsion électrique", "Commande vectorielle"],
+    categoryFr: "Électrotechnique & Simulation",
+    categoryEn: "Electrotechnics & Simulation",
+    titleFr: "Caractérisation d'une MSAP sous FEMM",
+    titleEn: "FEMM Characterization of a PMSM",
+    contextFr: "TP de simulation d'une machine synchrone à aimants permanents afin d'étudier ses champs statoriques et son couple électromagnétique.",
+    contextEn: "Simulation lab on a permanent-magnet synchronous machine, studying stator fields and electromagnetic torque.",
+    methodFr: "Modélisation 2D sous FEMM, construction des excitations statoriques, passage dans le repère de Concordia et calcul du couple.",
+    methodEn: "2D FEMM modeling, construction of stator excitations, Concordia-frame transformation and torque calculation.",
+    resultsFr: "Dans le modèle étudié, le rapport obtient une constante de couple voisine de 0,15 N·m/A. Cette valeur caractérise la simulation ; le rendement et le comportement en charge sur banc n’ont pas été évalués.",
+    resultsEn: "In the studied model, the report obtains a torque constant close to 0.15 N·m/A. This value characterizes the simulation; efficiency and test-bench behavior under load were not evaluated.",
+    tags: ["FEMM", "MSAP / PMSM", "Champ magnétique", "Concordia", "Couple électromagnétique"],
+    tagsEn: ["FEMM", "MSAP / PMSM", "Magnetic field", "Concordia", "Electromagnetic torque"],
     reportPdf: "assets/reports/P09_Rapport_MSAP_Electrotechnique.pdf"
   },
   p10: {
     categoryFr: "Énergétique & Systèmes",
     categoryEn: "Energy & Systems",
-    titleFr: "Chaîne de traction électrique et simulation énergétique de VE",
-    titleEn: "EV Powertrain & Longitudinal Energy Simulation",
-    contextFr: "Évaluation de la consommation énergétique, de l'autonomie et du comportement dynamique d'un véhicule électrique sur cycles de conduite standard (WLTP/NEDC).",
-    contextEn: "Evaluating energy consumption, range and dynamic vehicle response across standard regulatory driving cycles (WLTP/NEDC).",
-    methodFr: "Modélisation dynamique longitudinale sous MATLAB/Simulink (batterie, onduleur, moteur, réducteur, aérodynamique et résistance au roulement).",
-    methodEn: "Complete longitudinal powertrain model in MATLAB/Simulink covering battery pack, inverter, e-motor, gear reduction, aerodynamics and rolling resistance.",
-    resultsFr: "Simulation précise des flux d'énergie en accélération et régénération au freinage, dimensionnement optimal de la capacité batterie.",
-    resultsEn: "Accurate simulation of energy flows during acceleration and regenerative braking, sizing battery capacity for targeted range limits.",
-    tags: ["MATLAB", "Simulink", "Chaîne de traction", "Véhicule électrique", "Cycle WLTP"],
+    titleFr: "Modélisation causale d'une chaîne de traction électrique",
+    titleEn: "Causal Modeling of an Electric Powertrain",
+    contextFr: "Projet académique visant à relier, dans un modèle simplifié, les principaux sous-systèmes d'un véhicule électrique.",
+    contextEn: "Academic project linking the main electric-vehicle subsystems in a simplified model.",
+    methodFr: "Assemblage causal des blocs batterie, convertisseur, moteur, réducteur, roue et véhicule, avec leurs relations mécaniques et énergétiques.",
+    methodEn: "Causal assembly of battery, converter, motor, gearbox, wheel and vehicle blocks with their mechanical and energy relationships.",
+    resultsFr: "Le modèle illustre les échanges entre sous-systèmes. Le rapport ne fournit pas de validation expérimentale ni de résultat d'autonomie, de consommation ou de SOC à revendiquer.",
+    resultsEn: "The model illustrates exchanges between subsystems. The report provides no experimental validation and no range, consumption or state-of-charge result to claim.",
+    tags: ["Modélisation causale", "Batterie", "Convertisseur", "Moteur", "Dynamique longitudinale"],
+    tagsEn: ["Causal modeling", "Battery", "Converter", "Motor", "Longitudinal dynamics"],
     reportPdf: "assets/reports/P10_Rapport_Chaine_Traction_VE.pdf"
   },
   p11: {
     categoryFr: "Qualité & Plans d'expériences",
     categoryEn: "Quality & DoE",
-    titleFr: "Optimisation robuste de coupe par Taguchi & ANOVA",
-    titleEn: "Robust Machining Optimization via Taguchi & ANOVA",
-    contextFr: "Usinage de pièces mécaniques à hautes exigences géométriques et d'état de surface (rugosité Ra), avec nécessité de réduire l'usure outil.",
-    contextEn: "Precision machining of mechanical parts requiring strict surface roughness (Ra) tolerances while minimizing tool wear and cycle times.",
-    methodFr: "Plan d'expériences (Plan de Taguchi L9/L18), mesure de la rugosité en atelier et analyse de variance (ANOVA) pour isoler les facteurs influents (vitesse de coupe, avance, profondeur).",
-    methodEn: "Design of Experiments (Taguchi L9/L18 array), shop-floor roughness measurements, and ANOVA variance analysis isolating primary parameter influences (cutting speed, feed rate, depth of cut).",
-    resultsFr: "Détermination de la combinaison paramétrique optimale, réduction de la dispersion de rugosité de 35 % et gain en durée de vie outil.",
-    resultsEn: "Identified optimal cutting parameters, reduced surface roughness variance by 35% and improved cutting tool longevity.",
-    tags: ["Plan d'expériences (DoE)", "Méthode de Taguchi", "ANOVA", "Qualité usinage", "Rugosité"],
+    titleFr: "Plan Taguchi L8 et analyse ANOVA",
+    titleEn: "Taguchi L8 Design and ANOVA",
+    contextFr: "TP de qualité consacré à l'influence de trois facteurs d'usinage sur la réponse observée.",
+    contextEn: "Quality lab studying the influence of three machining factors on the observed response.",
+    methodFr: "Mise en œuvre d'un plan Taguchi L8, calcul des rapports signal/bruit et analyse de variance pour estimer la contribution de chaque facteur.",
+    methodEn: "Taguchi L8 design, signal-to-noise calculations and analysis of variance to estimate each factor's contribution.",
+    resultsFr: "Dans les données du TP, l'avance est le facteur dominant avec 78,05 % de contribution et A1B1C1 est la combinaison retenue. Un essai de confirmation serait nécessaire pour quantifier le gain obtenu.",
+    resultsEn: "In the lab data, feed rate is the dominant factor with a 78.05% contribution, and A1B1C1 is the selected combination. A confirmation test would be needed to quantify the improvement.",
+    tags: ["Plan Taguchi L8", "ANOVA", "Signal / Bruit", "3 facteurs", "A1B1C1"],
+    tagsEn: ["Taguchi L8 design", "ANOVA", "Signal-to-noise", "3 factors", "A1B1C1"],
     reportPdf: "assets/reports/P11_Rapport_Optimisation_Taguchi_ANOVA.pdf"
   },
   p12: {
-    categoryFr: "Données & Architecture SQL",
-    categoryEn: "Data & SQL Architecture",
-    titleFr: "Conception de base de données SQL & Application — OREXA",
-    titleEn: "SQL Database & Operations Management — OREXA",
-    contextFr: "Gestion informatisée des flux logistiques, des stocks de pièces détachées et de la traçabilité des interventions sur un événement d'envergure (CAN 2025).",
-    contextEn: "Computerized logistics workflows, spare parts inventory tracking and intervention traceability for a major operational event (CAN 2025).",
-    methodFr: "Modélisation conceptuelle (MCD/MERISE), implémentation d'une base de données relationnelle sous SQL et requêtes d'agrégation d'indicateurs opérationnels.",
-    methodEn: "MERISE conceptual data modeling (MCD), relational SQL database implementation and aggregation queries for operational KPIs.",
-    resultsFr: "Intégrité référentielle garantie, temps d'accès aux historiques divisé par 4 et tableau de bord de pilotage logistique opérationnel.",
-    resultsEn: "Guaranteed relational integrity, 4x faster query response for maintenance histories and an operational logistics tracking dashboard.",
-    tags: ["SQL", "MERISE / MCD", "Base de données relationnelle", "Gestion logistique", "Traçabilité"],
+    categoryFr: "Données & Base relationnelle",
+    categoryEn: "Data & Relational Databases",
+    titleFr: "Base de données relationnelle — CAN 2025",
+    titleEn: "Relational Database — AFCON 2025",
+    contextFr: "Projet académique de structuration des données de la CAN 2025 dans Microsoft Access.",
+    contextEn: "Academic project structuring AFCON 2025 data in Microsoft Access.",
+    methodFr: "Élaboration du MCD et du MLD selon MERISE, normalisation jusqu'en 3NF, puis création des tables, requêtes SQL, formulaires et états Access.",
+    methodEn: "MERISE conceptual and logical data modeling, normalization to 3NF, then creation of Access tables, SQL queries, forms and reports.",
+    resultsFr: "Le livrable comprend les tables, requêtes, formulaires et états nécessaires à la démonstration. Les performances d’accès et l’usage en conditions réelles n’ont pas fait l’objet d’une mesure quantitative.",
+    resultsEn: "The deliverable includes the tables, queries, forms and reports needed for the demonstration. Access performance and real-world use were not assessed quantitatively.",
+    tags: ["Microsoft Access", "MERISE", "MCD / MLD", "3NF", "SQL", "Formulaires et états"],
+    tagsEn: ["Microsoft Access", "MERISE", "Conceptual / logical model", "3NF", "SQL", "Forms and reports"],
     reportPdf: "assets/reports/P12_Rapport_BDD_OREXA_SQL.pdf"
   }
 };
@@ -564,22 +737,66 @@ if (vcardExportBtn) {
 const modalOverlay = document.getElementById("quickViewModal");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const modalCloseActionBtn = document.getElementById("modalCloseActionBtn");
+const modalFocusableSelector = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])"
+].join(",");
 
-function openQuickViewModal(projectId) {
+let activeProjectId = null;
+let lastModalTrigger = null;
+let modalHideTimer = null;
+let previousBodyOverflow = "";
+const backgroundInertState = new Map();
+
+function setModalInert(isInert) {
+  if (modalOverlay && "inert" in modalOverlay) modalOverlay.inert = isInert;
+}
+
+function setBackgroundInert(isInert) {
+  if (!modalOverlay || typeof HTMLElement === "undefined" || !("inert" in HTMLElement.prototype)) return;
+
+  if (isInert) {
+    backgroundInertState.clear();
+    Array.from(document.body.children).forEach((element) => {
+      if (!(element instanceof HTMLElement) || element === modalOverlay || element.tagName === "SCRIPT") return;
+      backgroundInertState.set(element, element.inert);
+      element.inert = true;
+    });
+    return;
+  }
+
+  backgroundInertState.forEach((wasInert, element) => {
+    if (element.isConnected) element.inert = wasInert;
+  });
+  backgroundInertState.clear();
+}
+
+function renderQuickViewModal(projectId, lang = document.documentElement.lang) {
   const data = projectQuickViewData[projectId];
-  if (!data || !modalOverlay) return;
-  const currentLang = localStorage.getItem("portfolio-language") || "fr";
+  if (!data || !modalOverlay) return false;
+  const useEnglish = lang === "en";
 
-  document.getElementById("modalCategory").textContent = currentLang === "en" ? data.categoryEn : data.categoryFr;
-  document.getElementById("modalTitle").textContent = currentLang === "en" ? data.titleEn : data.titleFr;
-  document.getElementById("modalContext").textContent = currentLang === "en" ? data.contextEn : data.contextFr;
-  document.getElementById("modalMethod").textContent = currentLang === "en" ? data.methodEn : data.methodFr;
-  document.getElementById("modalResults").textContent = currentLang === "en" ? data.resultsEn : data.resultsFr;
+  const modalValues = {
+    modalCategory: useEnglish ? data.categoryEn : data.categoryFr,
+    modalTitle: useEnglish ? data.titleEn : data.titleFr,
+    modalContext: useEnglish ? data.contextEn : data.contextFr,
+    modalMethod: useEnglish ? data.methodEn : data.methodFr,
+    modalResults: useEnglish ? data.resultsEn : data.resultsFr
+  };
+  Object.entries(modalValues).forEach(([id, value]) => {
+    const node = document.getElementById(id);
+    if (node) node.textContent = value;
+  });
 
   const tagsContainer = document.getElementById("modalTags");
   if (tagsContainer) {
-    tagsContainer.innerHTML = "";
-    data.tags.forEach((tag) => {
+    tagsContainer.replaceChildren();
+    const tags = useEnglish && data.tagsEn ? data.tagsEn : data.tags;
+    tags.forEach((tag) => {
       const span = document.createElement("span");
       span.textContent = tag;
       tagsContainer.appendChild(span);
@@ -588,36 +805,113 @@ function openQuickViewModal(projectId) {
 
   const reportLink = document.getElementById("modalReportLink");
   if (reportLink) reportLink.href = data.reportPdf;
+  return true;
+}
 
+function openQuickViewModal(projectId, triggerElement) {
+  if (!renderQuickViewModal(projectId) || !modalOverlay) return;
+
+  activeProjectId = projectId;
+  lastModalTrigger = triggerElement instanceof HTMLElement
+    ? triggerElement
+    : (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+
+  if (modalHideTimer) {
+    window.clearTimeout(modalHideTimer);
+    modalHideTimer = null;
+  }
+
+  previousBodyOverflow = document.body.style.overflow;
+  modalOverlay.hidden = false;
+  setModalInert(false);
+  setBackgroundInert(true);
   modalOverlay.classList.add("open");
   modalOverlay.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+
+  window.requestAnimationFrame(() => {
+    const initialFocus = closeModalBtn || modalCloseActionBtn || modalOverlay;
+    if (initialFocus === modalOverlay && !modalOverlay.hasAttribute("tabindex")) {
+      modalOverlay.setAttribute("tabindex", "-1");
+    }
+    initialFocus.focus();
+  });
 }
 
 function closeQuickViewModal() {
-  if (!modalOverlay) return;
+  if (!modalOverlay || !modalOverlay.classList.contains("open")) return;
   modalOverlay.classList.remove("open");
   modalOverlay.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
+  setModalInert(true);
+  setBackgroundInert(false);
+  document.body.style.overflow = previousBodyOverflow;
+
+  const focusTarget = lastModalTrigger;
+  activeProjectId = null;
+  lastModalTrigger = null;
+  if (focusTarget && focusTarget.isConnected) focusTarget.focus();
+
+  modalHideTimer = window.setTimeout(() => {
+    if (modalOverlay && !modalOverlay.classList.contains("open")) modalOverlay.hidden = true;
+    modalHideTimer = null;
+  }, 350);
 }
 
 document.querySelectorAll(".quick-view-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     const pid = btn.getAttribute("data-project");
-    if (pid) openQuickViewModal(pid);
+    if (pid) openQuickViewModal(pid, btn);
   });
 });
 
 if (closeModalBtn) closeModalBtn.addEventListener("click", closeQuickViewModal);
 if (modalCloseActionBtn) modalCloseActionBtn.addEventListener("click", closeQuickViewModal);
 if (modalOverlay) {
+  modalOverlay.hidden = true;
+  modalOverlay.setAttribute("aria-hidden", "true");
+  setModalInert(true);
   modalOverlay.addEventListener("click", (e) => {
     if (e.target === modalOverlay) closeQuickViewModal();
   });
 }
+
+document.addEventListener("portfolio-language-change", (event) => {
+  if (activeProjectId && modalOverlay && modalOverlay.classList.contains("open")) {
+    renderQuickViewModal(activeProjectId, event.detail.lang);
+  }
+});
+
 window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modalOverlay && modalOverlay.classList.contains("open")) {
+  if (!modalOverlay || !modalOverlay.classList.contains("open")) return;
+
+  if (e.key === "Escape") {
+    e.preventDefault();
     closeQuickViewModal();
+    return;
+  }
+
+  if (e.key !== "Tab") return;
+  const focusableElements = Array.from(modalOverlay.querySelectorAll(modalFocusableSelector))
+    .filter((element) => element instanceof HTMLElement
+      && !element.hidden
+      && element.getAttribute("aria-hidden") !== "true"
+      && element.getClientRects().length > 0);
+
+  if (focusableElements.length === 0) {
+    e.preventDefault();
+    modalOverlay.focus();
+    return;
+  }
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  const focusIsOutside = !modalOverlay.contains(document.activeElement);
+  if (e.shiftKey && (document.activeElement === firstElement || focusIsOutside)) {
+    e.preventDefault();
+    lastElement.focus();
+  } else if (!e.shiftKey && (document.activeElement === lastElement || focusIsOutside)) {
+    e.preventDefault();
+    firstElement.focus();
   }
 });

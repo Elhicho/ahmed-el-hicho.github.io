@@ -1,54 +1,40 @@
-# Portfolio GitHub Pages — Ahmed El Hicho
+# Portfolio — Ahmed El Hicho
 
-Portfolio personnel responsive et bilingue, conçu pour présenter un profil d'élève ingénieur orienté **aéronautique, industrialisation, structures, digital manufacturing et intelligence artificielle**.
+Je suis élève ingénieur aux Arts et Métiers, dans le parcours Aeronautics & Space. Ce dépôt rassemble les projets qui m'ont permis de travailler sur la mécanique, la simulation et la digitalisation industrielle.
+
+**Site publié :** [elhicho.github.io/ahmed-el-hicho.github.io](https://elhicho.github.io/ahmed-el-hicho.github.io/)
 
 ## Aperçu
 
 ![Aperçu du portfolio](assets/preview.png)
 
-## Contenu
+## Ce que contient le portfolio
 
-- Présentation et disponibilité
-- Six projets techniques détaillés
-- Expériences, formation et leadership
-- Compétences mécaniques, numériques et industrielles
-- Thématique de recherche autour de l'IA appliquée à l'aéronautique et au spatial
-- Liens de contact et CV téléchargeable
-- Version française et anglaise
-- Mise en page adaptée aux ordinateurs, tablettes et téléphones
+Trois projets sont présentés en priorité :
 
-## Publication comme site personnel
+- un prototype MES sous Tulip, réalisé en équipe de trois sur la plateforme X-Manufacturing ;
+- un prototype de reporting audio développé pendant mon stage chez DOGA FZ ;
+- une analyse modale sous Abaqus comparée à des mesures expérimentales.
 
-1. Créer un dépôt nommé `ahmed-el-hicho.github.io` (déjà fait : https://github.com/Elhicho/ahmed-el-hicho.github.io).
-2. Ajouter tous les fichiers de ce dossier à la racine du dépôt.
-3. Valider les fichiers sur la branche principale.
-4. Activer GitHub Pages pour publier la branche principale depuis la racine du dépôt.
+Neuf autres projets académiques complètent cette sélection : ANDON digital, SVM par Uzawa, éco-audit, équilibrage dynamique, étude d'un VAE, simulation FEMM d'une MSAP, chaîne de traction, Taguchi L8 et base de données Access.
 
-Adresse du site : `https://elhicho.github.io/ahmed-el-hicho.github.io/`
+Pour chaque projet, le site précise le contexte, la méthode, les résultats et les limites. Les douze rapports techniques sont accessibles depuis les cartes correspondantes.
 
-## Modification rapide
+## Choix de présentation
 
-- Contenu principal : `index.html`
-- Design : `styles.css`
-- Traductions et interactions : `script.js`
-- Photo, CV et aperçu : dossier `assets/`
+- Les prototypes sont distingués des systèmes déployés.
+- Les chiffres affichés proviennent du CV final ou des rapports joints.
+- Les outils réellement utilisés sont séparés des notions étudiées et des sujets de veille.
+- La version française et la version anglaise couvrent le même contenu.
 
-## Structure
+## Technique
 
-```text
-.
-├── index.html
-├── styles.css
-├── script.js
-├── .nojekyll
-├── 404.html
-├── robots.txt
-├── sitemap.xml
-└── assets
-    ├── ahmed-el-hicho.webp
-    ├── CV_Ahmed_El_Hicho.pdf
-    ├── favicon.svg
-    └── preview.png
-```
+Le site est statique et ne dépend d'aucun framework :
 
-Le site n'utilise aucun framework ni dépendance externe : il peut être publié directement sur GitHub Pages.
+- `index.html` : structure et contenu principal ;
+- `styles.css` : mise en page, responsive et thèmes clair/sombre ;
+- `script.js` : traductions, filtres et interactions ;
+- `assets/reports/` : rapports techniques PDF ;
+- `assets/media/` : photographies liées aux expériences collectives.
+
+Il peut être servi directement par GitHub Pages.
