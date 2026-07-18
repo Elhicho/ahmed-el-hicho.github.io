@@ -917,76 +917,100 @@ window.addEventListener("keydown", (e) => {
 });
 
 
-  // ==================== SECURITY & ANTI-SCRAPING ====================
-  // Obfuscated Email Decode
-  const secureEmailBtns = document.querySelectorAll('.secure-email');
-  secureEmailBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+// ==================== SECURITY & ANTI-SCRAPING ====================
+document.addEventListener("DOMContentLoaded", function () {
+
+  // --- Obfuscated Email Decode ---
+  document.querySelectorAll('.secure-email').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
       e.preventDefault();
-      const encoded = btn.getAttribute('data-contact');
+      var encoded = btn.getAttribute('data-contact');
       if (encoded) {
-        const decoded = atob(encoded);
+        var decoded = atob(encoded);
         btn.textContent = decoded;
-        btn.href = `mailto:${decoded}`;
+        btn.href = 'mailto:' + decoded;
         btn.classList.remove('secure-email');
       }
     });
   });
 
-  // Document Password Protection (Client-Side)
-  // Hardcoded hash check for simplicity (password is "aero2027")
-  // btoa("aero2027") = "YWVybzIwMjc="
-  const TARGET_HASH = "YWVybzIwMjc=";
-  
-  const securityModal = document.getElementById('securityModal');
-  const closeSecurityModal = document.getElementById('closeSecurityModal');
-  const cancelSecurityBtn = document.getElementById('cancelSecurityBtn');
-  const confirmSecurityBtn = document.getElementById('confirmSecurityBtn');
-  const documentPassword = document.getElementById('documentPassword');
-  const securityError = document.getElementById('securityError');
-  let pendingDocUrl = '';
+  // --- Document Password Protection ---
+  var TARGET_HASH = "YWVybzIwMjc="; // btoa("aero2027")
 
-  // Intercept PDF links
-  const docLinks = document.querySelectorAll('a[href$=".pdf"]');
-  docLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      pendingDocUrl = link.href;
-      securityModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      documentPassword.value = '';
-      securityError.style.display = 'none';
-      documentPassword.focus();
-    });
-  });
+  var securityModal = document.getElementById('securityModal');
+  var closeSecurityModal = document.getElementById('closeSecurityModal');
+  var cancelSecurityBtn = document.getElementById('cancelSecurityBtn');
+  var confirmSecurityBtn = document.getElementById('confirmSecurityBtn');
+  var documentPassword = document.getElementById('documentPassword');
+  var securityError = document.getElementById('securityError');
+  var pendingDocUrl = '';
+
+  if (!securityModal || !documentPassword) {
+    console.warn('[Security] Modal elements not found in DOM.');
+    return;
+  }
+
+  function openSecurityModal(url) {
+    pendingDocUrl = url;
+    documentPassword.value = '';
+    securityError.style.display = 'none';
+    securityModal.removeAttribute('hidden');
+    securityModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { documentPassword.focus(); }, 120);
+  }
 
   function closeSecurity() {
-    securityModal.classList.remove('active');
+    securityModal.classList.remove('open');
     document.body.style.overflow = 'auto';
     pendingDocUrl = '';
   }
 
   function verifyPassword() {
-    const inputHash = btoa(documentPassword.value);
-    if (inputHash === TARGET_HASH) {
-      // Success
+    if (btoa(documentPassword.value) === TARGET_HASH) {
       closeSecurity();
       window.open(pendingDocUrl, '_blank', 'noopener,noreferrer');
     } else {
-      // Error
       securityError.style.display = 'block';
       documentPassword.value = '';
+      documentPassword.focus();
     }
   }
 
-  if (closeSecurityModal) closeSecurityModal.addEventListener('click', closeSecurity);
-  if (cancelSecurityBtn) cancelSecurityBtn.addEventListener('click', closeSecurity);
-  if (confirmSecurityBtn) confirmSecurityBtn.addEventListener('click', verifyPassword);
-  
-  if (documentPassword) {
-    documentPassword.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        verifyPassword();
+  // Intercept every PDF link on the page (report links, CV link, modal link)
+  document.querySelectorAll('a[href*=".pdf"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      openSecurityModal(link.href);
+    });
+  });
+
+  // Also intercept dynamically-set modal report link
+  var modalReportLink = document.getElementById('modalReportLink');
+  if (modalReportLink) {
+    modalReportLink.addEventListener('click', function (e) {
+      if (modalReportLink.href && modalReportLink.href.indexOf('.pdf') !== -1) {
+        e.preventDefault();
+        e.stopPropagation();
+        openSecurityModal(modalReportLink.href);
       }
     });
   }
+
+  // Close modal buttons
+  if (closeSecurityModal) closeSecurityModal.addEventListener('click', closeSecurity);
+  if (cancelSecurityBtn) cancelSecurityBtn.addEventListener('click', closeSecurity);
+  if (confirmSecurityBtn) confirmSecurityBtn.addEventListener('click', verifyPassword);
+
+  // Enter key in password field
+  documentPassword.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') { verifyPassword(); }
+  });
+
+  // Close on overlay click (outside the modal container)
+  securityModal.addEventListener('click', function (e) {
+    if (e.target === securityModal) { closeSecurity(); }
+  });
+
+});
