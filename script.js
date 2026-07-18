@@ -968,8 +968,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function verifyPassword() {
     if (btoa(documentPassword.value) === TARGET_HASH) {
+      var url = pendingDocUrl;
       closeSecurity();
-      window.open(pendingDocUrl, '_blank', 'noopener,noreferrer');
+      // Use a temporary <a> to open the PDF in a new tab without triggering popup blockers
+      var a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     } else {
       securityError.style.display = 'block';
       documentPassword.value = '';
