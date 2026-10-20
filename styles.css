@@ -808,6 +808,63 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-size: 1rem;
 }
 
+.cv-intro {
+  max-width: 680px;
+  margin: 1.2rem 0 .5rem;
+  color: var(--text-muted);
+}
+.cv-availability {
+  margin: 0;
+  color: var(--text-accent);
+  font-size: .86rem;
+  font-weight: 650;
+}
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.cv-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--text-accent);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.cv-format {
+  margin: 0 0 1.2rem;
+  color: var(--text-muted);
+  font-size: .76rem;
+  font-weight: 650;
+}
+.cv-card h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.cv-description {
+  flex: 1;
+  margin: 1rem 0 1.7rem;
+  color: var(--text-muted);
+  font-size: .92rem;
+}
+.cv-card .button { width: 100%; }
+.cv-general {
+  margin: 1.5rem 0 0;
+  color: var(--text-muted);
+  font-size: .86rem;
+  text-underline-offset: .25rem;
+}
+@media (max-width: 900px) {
+  .cv-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
 .contact-card {
   display: grid;
   grid-template-columns: 1.3fr .7fr;
@@ -1797,3 +1854,4 @@ body.dark-theme .media-link-btn:hover {
     text-align: center;
   }
 }
+

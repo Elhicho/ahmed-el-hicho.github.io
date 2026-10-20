@@ -22,6 +22,8 @@ Pour chaque projet, le site précise le contexte, la méthode, les résultats et
 
 ## Choix de présentation
 
+La rubrique **Mes CV**, accessible depuis l'accueil et le menu, propose trois PDF en français : industrialisation/méthodes/qualité, digitalisation/data et mécanique/systèmes/simulation. Les fichiers sont dans `assets/cv/` ; le CV général reste accessible. Les liens utilisent le contrôle d'accès aux documents déjà présent sur le site.
+
 - Les prototypes sont distingués des systèmes déployés.
 - Les chiffres affichés proviennent du CV final ou des rapports joints.
 - Les outils réellement utilisés sont séparés des notions étudiées et des sujets de veille.
@@ -38,3 +40,4 @@ Le site est statique et ne dépend d'aucun framework :
 - `assets/media/` : photographies liées aux expériences collectives.
 
 Il peut être servi directement par GitHub Pages.
+
